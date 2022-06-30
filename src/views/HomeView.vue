@@ -43,8 +43,7 @@ export default defineComponent({
       height: 100%;
       z-index: 100;
       opacity: 0;
-      top: 61px;
-      bottom: 61px;
+      height: calc(100vh -61px -61px);
 
       &:checked {
         & ~ div.curtain__panel--left {
