@@ -44,6 +44,7 @@ export default defineComponent({
       z-index: 100;
       opacity: 0;
       top: 61px;
+      bottom: 61px;
 
       &:checked {
         & ~ div.curtain__panel--left {
