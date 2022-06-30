@@ -59,7 +59,7 @@ export default {
 
 <style>
 .about {
-  min-height: calc(100vh - 60px - 60px);
+  min-height: calc(100vh - 61px - 61px);
 }
 .fly-in-text {
   display: flex;
