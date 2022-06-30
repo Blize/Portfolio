@@ -60,8 +60,8 @@ export default defineComponent({
   &__panel {
     display: flex;
     align-items: center;
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background: rgb(242, 242, 242);
+    color: rgb(0, 0, 0);
     float: left;
     position: relative;
     width: 50%;
