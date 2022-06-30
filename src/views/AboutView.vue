@@ -15,7 +15,7 @@
         computer science. Below here you can my hoobys and more.
       </h4>
     </div>
-
+    <!--
     <div class="hobby">
       <div class="title-hobby">
         <h1>Hobbys</h1>
@@ -38,7 +38,7 @@
           </span>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
