@@ -1,30 +1,41 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap"
+    rel="stylesheet"
+  />
+  <div class="parent">
+    <Header />
+    <router-view></router-view>
+    <Footer />
+  </div>
 </template>
 
+<script>
+import { defineComponent } from "vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+export default defineComponent({
+  data() {
+    return {};
+  },
+  components: {
+    Header,
+    Footer,
+  },
+});
+</script>
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: "Manrope", sans-serif;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
 }
 </style>
