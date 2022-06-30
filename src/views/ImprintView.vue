@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h1>Imprint</h1>
+  <div class="parent">
+    <div class="title">
+      <h1>Imprint</h1>
+    </div>
   </div>
 </template>
 
@@ -8,4 +10,13 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+.parent {
+  min-height: calc(100vh - 61px - 61px);
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
