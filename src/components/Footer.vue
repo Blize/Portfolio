@@ -7,7 +7,7 @@
         >Last commit: {{ lastCommit }} Days ago</span
       >
     </div>
-    <h5>@ 2022</h5>
+    <h5>@2022</h5>
   </footer>
 </template>
 
