@@ -1,19 +1,43 @@
 <template>
-  <nav>
-    <router-link to="/" class="routerButton">Home</router-link>
-    <router-link to="/about" class="routerButton">About</router-link>
-  </nav>
+  <div
+    :class="theme === 'light' ? 'light-theme' : 'dark-theme'"
+    class="main-body"
+  >
+    <nav>
+      <router-link to="/" class="routerButton">Home</router-link>
+      <router-link to="/about" class="routerButton">About</router-link>
+      <span
+        class="routerButton"
+        v-if="this.theme == 'light'"
+        @click="changeTheme"
+      >
+        Day
+      </span>
+
+      <span v-else class="routerButton" @click="changeTheme">Night</span>
+    </nav>
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
+<script>
+export default {
   name: "Header",
-});
+  data() {
+    return {
+      theme: "light",
+    };
+  },
+  methods: {
+    changeTheme() {
+      this.theme = this.theme === "dark" ? "light" : "dark";
+      const key = "DarkOrLightMode";
+      window.localStorage.setItem(key, this.theme);
+    },
+  },
+};
 </script>
 
-<style scoped>
+<style>
 nav {
   display: flex;
   flex-direction: row;
@@ -33,6 +57,8 @@ nav {
   border-radius: 6px;
   color: black;
   transition-duration: 0.5s;
+  background: none;
+  border: none;
 }
 .routerButton:hover {
   background-color: rgb(183, 183, 183);
@@ -44,5 +70,21 @@ nav {
   cursor: grabbing;
   transform: scale(0.95);
   transition-duration: 0.75s;
+}
+
+.dark-theme {
+  top: 0;
+  background-color: #3d3d3d;
+  color: rgb(167, 167, 167);
+  border: rgb(0, 0, 0);
+  transition-duration: 0.5s;
+}
+
+.light-theme {
+  margin: 0;
+  background-color: whitesmoke;
+  color: black;
+  border: black;
+  transition-duration: 0.5s;
 }
 </style>

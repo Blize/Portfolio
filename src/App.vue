@@ -1,11 +1,14 @@
 <template>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap"
-    rel="stylesheet"
-  />
-  <div class="parent">
+  <div
+    :class="theme === 'light' ? 'light-theme' : 'dark-theme'"
+    class="main-body"
+  >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <Header />
     <router-view></router-view>
     <Footer />
@@ -18,12 +21,24 @@ import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 export default defineComponent({
   data() {
-    return {};
+    return {
+      theme: "light",
+      timer: null,
+    };
   },
   components: {
     Header,
     Footer,
   },
+  medthods: {
+    getTheme() {
+      const key = "DarkOrLightMode";
+
+      this.theme = window.localStorage.getItem(key);
+      console.log(this.theme);
+    },
+  },
+  mounted() {},
 });
 </script>
 <style>
@@ -37,5 +52,20 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+}
+.dark-theme {
+  top: 0;
+  background-color: #3d3d3d;
+  color: rgb(167, 167, 167);
+  border: rgb(0, 0, 0);
+  transition-duration: 0.5s;
+}
+
+.light-theme {
+  margin: 0;
+  background-color: white;
+  color: black;
+  border: black;
+  transition-duration: 0.5s;
 }
 </style>

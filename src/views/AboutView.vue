@@ -15,7 +15,7 @@
         computer science. Below here you can my hoobys and more.
       </h4>
     </div>
-    <!--
+
     <div class="hobby">
       <div class="title-hobby">
         <h1>Hobbys</h1>
@@ -38,7 +38,7 @@
           </span>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -76,7 +76,7 @@ export default {
   opacity: 0;
 }
 .fly-in-text.hidden h1:nth-child(1) {
-  transform: translateX(-200px) translateY(-200px);
+  transform: translateX(-400px) translateY(-200px);
 }
 .fly-in-text.hidden h1:nth-child(2) {
   transform: translateX(20px) translateY(100px);
