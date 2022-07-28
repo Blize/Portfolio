@@ -27,8 +27,11 @@ export default {
       theme: "light",
     };
   },
+  emits: ["changeTheme"],
+  props: {},
   methods: {
     changeTheme() {
+      this.$emit("changeTheme");
       this.theme = this.theme === "dark" ? "light" : "dark";
       const key = "DarkOrLightMode";
       window.localStorage.setItem(key, this.theme);

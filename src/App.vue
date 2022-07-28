@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap"
       rel="stylesheet"
     />
-    <Header />
+    <Header @changeTheme="theme = theme === 'dark' ? 'light' : 'dark'" />
     <router-view></router-view>
     <Footer />
   </div>
@@ -23,22 +23,18 @@ export default defineComponent({
   data() {
     return {
       theme: "light",
-      timer: null,
     };
   },
   components: {
     Header,
     Footer,
   },
-  medthods: {
-    getTheme() {
-      const key = "DarkOrLightMode";
-
-      this.theme = window.localStorage.getItem(key);
-      console.log(this.theme);
+  medthods: {},
+  computed: {
+    ChangeTheme() {
+      this.theme = this.theme === "dark" ? "light" : "dark";
     },
   },
-  mounted() {},
 });
 </script>
 <style>
@@ -60,7 +56,9 @@ body {
   border: rgb(0, 0, 0);
   transition-duration: 0.5s;
 }
-
+.dark-theme footer {
+  color: rgb(167, 167, 167);
+}
 .light-theme {
   margin: 0;
   background-color: white;

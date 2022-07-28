@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <h5><router-link to="/imprint">Imprint</router-link></h5>
+    <h5><router-link to="/imprint" class="imprint">Imprint</router-link></h5>
     <div class="popup" @click="popUpFunction()">
       <h5>Version 0.0</h5>
       <span class="popuptext" id="myPopup"
