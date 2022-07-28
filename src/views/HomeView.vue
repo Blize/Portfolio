@@ -1,7 +1,12 @@
 <template>
   <div class="curtain">
     <div class="curtain__wrapper">
-      <input type="checkbox" checked />
+      <input
+        type="checkbox"
+        checked
+        @click="disableInput()"
+        :disabled="validate"
+      />
 
       <div class="curtain__panel curtain__panel--left">
         <h1>Wel</h1>
@@ -23,6 +28,16 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "HomeView",
+  data() {
+    return {
+      validate: false,
+    };
+  },
+  methods: {
+    disableInput() {
+      this.validate = true;
+    },
+  },
 });
 </script>
 
