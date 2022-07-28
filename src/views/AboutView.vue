@@ -10,7 +10,7 @@
 
     <div class="info-text">
       <h4>
-        I am a 17 year old programmer and designer. I am at my first year at
+        I am a 17 year old programmer and designer. I am at my second year at
         swisscom. I am application developer, and have experienced many areas of
         computer science. Below here you can my hoobys and more.
       </h4>
