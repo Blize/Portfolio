@@ -3,9 +3,7 @@
     <h5><router-link to="/imprint" class="imprint">Imprint</router-link></h5>
     <div class="popup" @click="popUpFunction()">
       <h5>Version 0.0</h5>
-      <span class="popuptext" id="myPopup"
-        >Last commit: {{ lastCommit }} Days ago</span
-      >
+      <span class="popuptext" id="myPopup">Last commit: {{ lastCommit }}</span>
     </div>
     <h5>@2022</h5>
   </footer>
@@ -23,6 +21,17 @@ export default {
       var popup = document.getElementById("myPopup");
       popup.classList.toggle("show");
     },
+  },
+  mounted() {
+    fetch("https://api.github.com/repos/Blize/Portfolio/commits/main", {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => (this.lastCommit = data.commit.committer.date))
+      .then((data) => {
+        const date = data.split("T", 1);
+        this.lastCommit = date;
+      });
   },
 };
 </script>
