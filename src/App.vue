@@ -56,7 +56,15 @@ body {
   border: rgb(0, 0, 0);
   transition-duration: 0.5s;
 }
-.dark-theme footer {
+.dark-theme a {
+  color: rgb(167, 167, 167);
+  text-decoration: none;
+}
+.light-theme a {
+  color: black;
+  text-decoration: none;
+}
+.dark-theme span {
   color: rgb(167, 167, 167);
 }
 .light-theme {

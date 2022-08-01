@@ -27,7 +27,7 @@ export default {
       method: "GET",
     })
       .then((response) => response.json())
-      .then((data) => (this.lastCommit = data.commit.committer.date))
+      .then((data) => data.commit.committer.date)
       .then((data) => {
         const date = data.split("T", 1);
         this.lastCommit = date;
@@ -37,10 +37,6 @@ export default {
 </script>
 
 <style>
-a {
-  text-decoration: none;
-  color: black;
-}
 .footer {
   display: flex;
   flex-direction: row;
