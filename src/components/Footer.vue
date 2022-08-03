@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <h5><router-link to="/imprint" class="imprint">Imprint</router-link></h5>
-    <div class="popup" @click="popUpFunction()">
+    <div class="popup" @mouseover="popUpFunction()" @mouseout="popUpFunction()">
       <h5>Version 0.0</h5>
       <span class="popuptext" id="myPopup">Last commit: {{ lastCommit }}</span>
     </div>
@@ -88,6 +88,7 @@ export default {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
+  transition-duration: 1s;
   z-index: 10000;
 }
 
