@@ -37,7 +37,7 @@ export default defineComponent({
   },
 });
 </script>
-<style>
+<style lang="scss">
 #app {
   font-family: "Manrope", sans-serif;
   width: 100vw;
@@ -68,6 +68,11 @@ body {
 }
 .dark-theme .hobby-object-child h3 {
   background-color: #686868;
+}
+.dark-theme .curtain {
+  &__panel {
+    background-color: #353535;
+  }
 }
 .light-theme {
   margin: 0;
