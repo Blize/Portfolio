@@ -52,7 +52,7 @@
             v-for="project in projects"
             :key="project.projectTitle"
             class="projects-child"
-            @click="showIFrame = false"
+            @click="testWindowWidth()"
           >
             <div class="project-under-child">
               <h1>{{ project.projectTitle }}</h1>
@@ -126,6 +126,16 @@ export default {
   methods: {
     onResize() {
       this.windowWidth = window.innerWidth;
+    },
+    testWindowWidth() {
+      if (this.windowWidth < 768) {
+        console.log("Your Window is to small to use this feature");
+        alert(
+          "Your current window-width(" +
+            this.windowWidth +
+            ") is to small to use this feature"
+        );
+      } else this.showIFrame = false;
     },
   },
   beforeDestroy() {
