@@ -60,12 +60,14 @@ body {
   color: rgb(167, 167, 167);
   text-decoration: none;
 }
-.light-theme a {
-  color: black;
-  text-decoration: none;
-}
 .dark-theme span {
   color: rgb(167, 167, 167);
+}
+.dark-theme .projects-child {
+  background-color: #686868;
+}
+.dark-theme .hobby-object-child h3 {
+  background-color: #686868;
 }
 .light-theme {
   margin: 0;
@@ -73,5 +75,9 @@ body {
   color: black;
   border: black;
   transition-duration: 0.5s;
+}
+.light-theme a {
+  color: black;
+  text-decoration: none;
 }
 </style>

@@ -42,8 +42,10 @@
 
     <div class="projects-parent">
       <div class="projects-object-parent">
-        <h1>Projects</h1>
-        <h4>Here is a small overview from my projects</h4>
+        <div class="project-text">
+          <h1>Projects</h1>
+          <h4>Here is a small overview from my projects</h4>
+        </div>
 
         <div v-if="showIFrame">
           <div
@@ -222,6 +224,9 @@ export default {
   flex-direction: column;
   text-align: center;
   border-radius: 6px;
+}
+.project-text {
+  text-align: center;
 }
 @media screen and (max-width: 668px) {
   .hobby-object-child h3 {
