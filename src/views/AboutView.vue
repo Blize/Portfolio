@@ -39,6 +39,46 @@
         </div>
       </div>
     </div>
+
+    <div class="projects-parent">
+      <div class="projects-object-parent">
+        <h1>Projects</h1>
+        <h4>Here is a small overview from my projects</h4>
+
+        <div v-if="showIFrame">
+          <div
+            v-for="project in projects"
+            :key="project.projectTitle"
+            class="projects-child"
+            @click="showIFrame = false"
+          >
+            <div class="project-under-child">
+              <h1>{{ project.projectTitle }}</h1>
+              <h4>
+                {{ project.projectInfo }}
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div v-else>
+          <div
+            class="projects-child"
+            v-for="project in projects"
+            :key="project.projectURL"
+          >
+            <div class="project-under-child">
+              <iframe
+                :src="project.projectURL"
+                height="400"
+                :width="this.windowWidth - 40"
+                title="Portfolio"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -47,12 +87,47 @@ export default {
   data() {
     return {
       isNotActive: true,
+      showIFrame: true,
+      windowWidth: 10,
+      projects: [
+        {
+          projectTitle: "Portfolio",
+          projectInfo:
+            "The Portfolio is a little webapplication built by myself. This webapplication has only a frontend",
+          projectURL: "https://blize.vercel.app",
+        },
+        {
+          projectTitle: "FaceApp",
+          projectInfo:
+            "This is a little application where I use a AI to recognize the emotion of the person who is looking in the camera: Note it does only work on windows",
+          projectURL: "https://face-app-detector.vercel.app",
+        },
+      ],
     };
   },
   mounted() {
     setTimeout(() => {
       this.isNotActive = false;
     }, 250);
+  },
+  created() {
+    this.windowWidth = window.innerHeight;
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
+  },
+  watch: {
+    windowWidth(newWidth, oldWidth) {
+      this.windowWidth = newWidth;
+    },
+  },
+  methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth;
+    },
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize);
   },
 };
 </script>
@@ -113,13 +188,48 @@ export default {
   align-items: center;
   justify-content: center;
 }
-h3 {
-  border: 1px solid rgb(239, 239, 239);
-  background-color: rgb(239, 239, 239);
-  border-radius: 6px;
-  padding: 5px;
-}
+
 .hobby-object-under-parent {
   margin: 1%;
+}
+.hobby-object-child h3 {
+  height: 5rem;
+  width: 10rem;
+  margin: 1rem;
+  border-radius: 6px;
+  background-color: rgb(249, 249, 249);
+  border: 0.65px solid rgb(218, 218, 218);
+  text-align: center;
+}
+.projects-object-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.projects-child {
+  height: 400px;
+  width: 400px;
+  background-color: rgb(249, 249, 249);
+  border: 0.65px solid rgb(218, 218, 218);
+  border-radius: 6px;
+  margin: 1rem 0 2rem 0;
+}
+.project-under-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 6px;
+}
+@media screen and (max-width: 668px) {
+  .hobby-object-child h3 {
+    width: 7.75rem;
+  }
+  .projects-child {
+    height: 300px;
+    width: 250px;
+  }
 }
 </style>
