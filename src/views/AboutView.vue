@@ -11,8 +11,8 @@
     <div class="info-text">
       <h4>
         I am a 17 year old programmer and designer. I am at my second year at
-        swisscom. I am application developer, and have experienced many areas of
-        computer science. Below here you can see my hoobys and more.
+        swisscom. I am an application developer, and have experienced many areas
+        of computer science. Below here you can see my hoobys and more.
       </h4>
     </div>
 
