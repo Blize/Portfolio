@@ -65,7 +65,7 @@
 
         <div v-else>
           <div
-            class="projects-child"
+            class="projects-child-iFrame"
             v-for="project in projects"
             :key="project.projectURL"
           >
@@ -231,6 +231,9 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
+.projects-child-iFrame {
+  margin: 1rem 0 2rem 0;
+}
 .projects-child {
   height: 400px;
   width: 400px;
@@ -238,6 +241,16 @@ export default {
   border: 0.65px solid rgb(218, 218, 218);
   border-radius: 6px;
   margin: 1rem 0 2rem 0;
+  transition-duration: 0.5s;
+}
+.projects-child:hover {
+  transform: scale(1.015);
+  transition-duration: 0.5s;
+  cursor: grab;
+}
+.projects-child:active {
+  transform: scale(0.95);
+  transition-duration: 0.5s;
 }
 .project-under-child {
   display: flex;
