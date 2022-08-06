@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ImprintView from "../views/ImprintView.vue";
+import PythonSourceCode from "../views/PythonSourceCode.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/imprint",
     name: "imprint",
     component: ImprintView,
+  },
+  {
+    path: "/src/code",
+    name: "pythonSourceCode",
+    component: PythonSourceCode,
   },
 ];
 

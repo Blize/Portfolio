@@ -95,14 +95,20 @@ export default {
         {
           projectTitle: "Portfolio",
           projectInfo:
-            "The Portfolio is a little webapplication built by myself. This webapplication has only a frontend",
+            "The Portfolio is a little webapplication built by myself. This webapplication has only a frontend.",
           projectURL: "https://blize.vercel.app",
         },
         {
           projectTitle: "FaceApp",
           projectInfo:
-            "This is a little application where I use a AI to recognize the emotion of the person who is looking in the camera: Note it does only work on windows",
+            "This is a little application where I use a AI to recognize the emotion of the person who is looking in the camera: NOTE it does only work on windows.",
           projectURL: "https://face-app-detector.vercel.app",
+        },
+        {
+          projectTitle: "Reddit-Bot",
+          projectInfo:
+            "This is a small Bot build with Python in school with some friends. You can send messages directly via Reddit. NOTE you can only see the source code.",
+          projectURL: "https://blize.vercel.app/src/code",
         },
       ],
     };
@@ -135,7 +141,12 @@ export default {
             this.windowWidth +
             ") is to small to use this feature"
         );
-      } else this.showIFrame = false;
+      } else {
+        this.showIFrame = false;
+        setInterval(() => {
+          this.showIFrame = true;
+        }, 100000);
+      }
     },
   },
   beforeDestroy() {
@@ -188,6 +199,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 0 5% 5px 5%;
 }
 .title-hobby {
