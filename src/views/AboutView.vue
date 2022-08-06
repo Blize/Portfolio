@@ -119,7 +119,7 @@ export default {
     }, 250);
   },
   created() {
-    this.windowWidth = window.innerHeight;
+    this.windowWidth = window.innerWidth;
     this.$nextTick(() => {
       window.addEventListener("resize", this.onResize);
     });

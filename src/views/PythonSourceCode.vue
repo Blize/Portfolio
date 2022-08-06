@@ -292,6 +292,6 @@ while True:
 
 <style>
 .body {
-  height: calc(100vh -61px -61px);
+  height: 100%;
 }
 </style>
