@@ -41,7 +41,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border-top: solid 1px black;
+  background-color: rgb(228, 228, 228);
+  border-top: solid 1px rgb(228, 228, 228);
   height: 60px;
 }
 /* Popup container - can be anything you want */

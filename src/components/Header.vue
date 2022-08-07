@@ -77,9 +77,9 @@ nav {
 
 .dark-theme {
   top: 0;
-  background-color: #3d3d3d;
+  background-color: #353535;
   color: rgb(167, 167, 167);
-  border: rgb(0, 0, 0);
+  border: #353535;
   transition-duration: 0.5s;
 }
 
@@ -87,7 +87,7 @@ nav {
   margin: 0;
   background-color: whitesmoke;
   color: black;
-  border: black;
+  border: rgb(104, 104, 104);
   transition-duration: 0.5s;
 }
 </style>

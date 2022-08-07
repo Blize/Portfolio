@@ -72,7 +72,7 @@
             <div class="project-under-child">
               <iframe
                 :src="project.projectURL"
-                height="400"
+                height="600"
                 :width="this.windowWidth - 40"
                 title="Portfolio"
               ></iframe>
