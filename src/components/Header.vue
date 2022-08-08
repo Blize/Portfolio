@@ -74,20 +74,4 @@ nav {
   transform: scale(0.95);
   transition-duration: 0.75s;
 }
-
-.dark-theme {
-  top: 0;
-  background-color: #353535;
-  color: rgb(167, 167, 167);
-  border: #353535;
-  transition-duration: 0.5s;
-}
-
-.light-theme {
-  margin: 0;
-  background-color: whitesmoke;
-  color: black;
-  border: rgb(104, 104, 104);
-  transition-duration: 0.5s;
-}
 </style>

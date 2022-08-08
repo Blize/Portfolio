@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { myDate } from "../utils/date.util.ts";
 export default {
   data() {
     return {
@@ -29,8 +30,8 @@ export default {
       .then((response) => response.json())
       .then((data) => data.commit.committer.date)
       .then((data) => {
-        const date = data.split("T", 1);
-        this.lastCommit = date;
+        const date = new Date(data);
+        this.lastCommit = myDate(date);
       });
   },
 };

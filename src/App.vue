@@ -64,10 +64,12 @@ body {
   color: rgb(167, 167, 167);
 }
 .dark-theme .projects-child {
-  background-color: #686868;
+  background-color: #454343;
+  border: #00000000;
 }
 .dark-theme .hobby-object-child h3 {
-  background-color: #686868;
+  background-color: #454343;
+  border: #00000000;
 }
 .dark-theme .curtain {
   &__panel {
@@ -77,6 +79,13 @@ body {
 .dark-theme .footer {
   background-color: #222222;
   border-color: #222222;
+}
+.dark-theme nav {
+  top: 0;
+  background-color: #353535;
+  color: rgb(167, 167, 167);
+  border: #353535;
+  transition-duration: 0.5s;
 }
 .light-theme {
   margin: 0;
@@ -88,13 +97,6 @@ body {
 .light-theme a {
   color: black;
   text-decoration: none;
-}
-.dark-theme nav {
-  top: 0;
-  background-color: #353535;
-  color: rgb(167, 167, 167);
-  border: #353535;
-  transition-duration: 0.5s;
 }
 .light-theme nav {
   margin: 0;

@@ -220,6 +220,7 @@ export default {
   height: 5rem;
   width: 10rem;
   margin: 1rem;
+  padding: 0.75rem;
   border-radius: 6px;
   background-color: rgb(249, 249, 249);
   border: 0.65px solid rgb(218, 218, 218);
@@ -241,6 +242,7 @@ export default {
   border: 0.65px solid rgb(218, 218, 218);
   border-radius: 6px;
   margin: 1rem 0 2rem 0;
+  padding: 0.75rem;
   transition-duration: 0.5s;
 }
 .projects-child:hover {
