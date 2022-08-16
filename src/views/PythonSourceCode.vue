@@ -291,7 +291,7 @@ while True:
 </script>
 
 <style>
-.body {
-  height: 100%;
+body {
+  height: 100vh;
 }
 </style>

@@ -40,43 +40,25 @@
       </div>
     </div>
 
-    <div class="projects-parent">
-      <div class="projects-object-parent">
-        <div class="project-text">
-          <h1>Projects</h1>
-          <h4>Here is a small overview from my projects</h4>
-        </div>
+    <div class="projects-object-parent">
+      <div class="project-text">
+        <h1>Projects</h1>
+        <h4>Here is a small overview from my projects</h4>
+      </div>
 
-        <div v-if="showIFrame">
-          <div
-            v-for="project in projects"
-            :key="project.projectTitle"
-            class="projects-child"
-            @click="testWindowWidth()"
-          >
-            <div class="project-under-child">
-              <h1>{{ project.projectTitle }}</h1>
-              <h4>
-                {{ project.projectInfo }}
-              </h4>
-            </div>
+      <div
+        class="flip-card"
+        v-for="project in projects"
+        :key="project.projectTitle"
+      >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h2>{{ project.projectTitle }}</h2>
+            <h4>{{ project.projectInfo }}</h4>
           </div>
-        </div>
-
-        <div v-else>
-          <div
-            class="projects-child-iFrame"
-            v-for="project in projects"
-            :key="project.projectURL"
-          >
-            <div class="project-under-child">
-              <iframe
-                :src="project.projectURL"
-                height="600"
-                :width="this.windowWidth - 40"
-                title="Portfolio"
-              ></iframe>
-            </div>
+          <div class="flip-card-back">
+            <h1>{{ project.projectTitle }}</h1>
+            <p>{{ project.projectURL }}</p>
           </div>
         </div>
       </div>
@@ -101,13 +83,13 @@ export default {
         {
           projectTitle: "FaceApp",
           projectInfo:
-            "This is a little application where I use a AI to recognize the emotion of the person who is looking in the camera: NOTE it does only work on windows.",
+            "This is a little application where I use a AI to recognize the emotion of the person who is looking in the camera.",
           projectURL: "https://face-app-detector.vercel.app",
         },
         {
           projectTitle: "Reddit-Bot",
           projectInfo:
-            "This is a small Bot build with Python in school with some friends. You can send messages directly via Reddit. NOTE you can only see the source code.",
+            "This is a small Bot build with Python in school with some friends. You can send messages directly via Reddit.",
           projectURL: "https://blize.vercel.app/src/code",
         },
       ],
@@ -232,38 +214,50 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
-.projects-child-iFrame {
-  margin: 1rem 0 2rem 0;
-}
-.projects-child {
-  height: 400px;
-  width: 400px;
-  background-color: rgb(249, 249, 249);
-  border: 0.65px solid rgb(218, 218, 218);
-  border-radius: 6px;
-  margin: 1rem 0 2rem 0;
-  padding: 0.75rem;
-  transition-duration: 0.5s;
-}
-.projects-child:hover {
-  transform: scale(1.015);
-  transition-duration: 0.5s;
-  cursor: grab;
-}
-.projects-child:active {
-  transform: scale(0.95);
-  transition-duration: 0.5s;
-}
-.project-under-child {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  border-radius: 6px;
-}
 .project-text {
   text-align: center;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 325px;
+  perspective: 1000px;
+  margin-bottom: 4rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  border-radius: 6px;
+  border: 0.65px solid rgb(218, 218, 218);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgb(249, 249, 249);
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(249, 249, 249);
+  transform: rotateY(180deg);
 }
 @media screen and (max-width: 668px) {
   .hobby-object-child h3 {
@@ -272,6 +266,10 @@ export default {
   .projects-child {
     height: 300px;
     width: 250px;
+  }
+  .flip-card {
+    width: 200px;
+    height: 250px;
   }
 }
 </style>

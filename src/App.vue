@@ -70,9 +70,19 @@ body {
   background-color: #454343;
   border: #00000000;
 }
+.dark-theme .flip-card-front {
+  background-color: #454343;
+  border: #00000000;
+  color: rgb(167, 167, 167);
+}
+.dark-theme .flip-card-back {
+  background-color: #454343;
+  border: #00000000;
+}
 .dark-theme .curtain {
   &__panel {
     background-color: #353535;
+    color: rgb(167, 167, 167);
   }
 }
 .dark-theme .footer {
