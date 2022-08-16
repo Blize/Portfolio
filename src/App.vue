@@ -40,7 +40,6 @@ export default defineComponent({
 <style lang="scss">
 #app {
   font-family: "Manrope", sans-serif;
-  width: 100vw;
   padding: 0;
   margin: 0;
 }
