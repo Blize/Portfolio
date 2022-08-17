@@ -23,21 +23,18 @@
       <div class="hobby-object-parent">
         <div
           class="hobby-object-under-parent"
-          v-for="hobby in hobbysOne"
+          v-for="hobby in hobbys"
           :key="hobby.hobbyTitle"
         >
-          <span class="hobby-object-child">
+          <span class="hobby-object-child" @click="openModal(hobby.id)">
             <h3>{{ hobby.hobbyTitle }}</h3>
           </span>
-        </div>
-        <div
-          class="hobby-object-under-parent"
-          v-for="hobby in hobbysTwo"
-          :key="hobby.hobbyTitle"
-        >
-          <span class="hobby-object-child">
-            <h3>{{ hobby.hobbyTitle }}</h3>
-          </span>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close" @click="closeModal()">&times;</span>
+              <h3>{{ modalText }}</h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -75,14 +72,14 @@ export default {
       isNotActive: true,
       showIFrame: true,
       windowWidth: 10,
-      hobbysOne: [
-        { id: 1, hobbyTitle: "Downhiler", hobbyModal: "I like" },
-        { id: 2, hobbyTitle: "Programmer", hobbyModal: "I like" },
+      hobbys: [
+        { id: 1, hobbyTitle: "Downhiler", hobbyModal: "WIP 1" },
+        { id: 2, hobbyTitle: "Programmer", hobbyModal: "WIP 2" },
+        { id: 3, hobbyTitle: "Gamer", hobbyModal: "WIP 3" },
+        { id: 4, hobbyTitle: "Drawer", hobbyModal: "WIP 4" },
       ],
-      hobbysTwo: [
-        { id: 3, hobbyTitle: "Gamer", hobbyModal: "I like" },
-        { id: 4, hobbyTitle: "Drawer", hobbyModal: "I like" },
-      ],
+
+      modalText: "",
       projects: [
         {
           projectTitle: "Portfolio",
@@ -139,6 +136,16 @@ export default {
           this.showIFrame = true;
         }, 100000);
       }
+    },
+    openModal(id) {
+      let myHobby = this.hobbys.filter((hobby) => hobby.id === id)[0];
+      this.modalText = myHobby.hobbyModal;
+      let modal = document.getElementsByClassName("modal")[0];
+      modal.style.display = "block";
+    },
+    closeModal() {
+      let modal = document.getElementsByClassName("modal")[0];
+      modal.style.display = "none";
     },
   },
   beforeDestroy() {
@@ -271,24 +278,33 @@ export default {
   transform: rotateY(180deg);
 }
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  backdrop-filter: blur(6px);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .modal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  border-radius: 6px;
   width: 80%;
+  text-align: center;
+}
+.close {
+  margin-top: -15px;
+  float: right;
+  color: #000000;
+  font-size: 35px;
+  font-weight: bold;
 }
 @media screen and (max-width: 668px) {
   .hobby-object-child h3 {
