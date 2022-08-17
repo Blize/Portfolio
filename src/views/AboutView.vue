@@ -21,20 +21,22 @@
         <h1>Hobbys</h1>
       </div>
       <div class="hobby-object-parent">
-        <div class="hobby-object-under-parent">
+        <div
+          class="hobby-object-under-parent"
+          v-for="hobby in hobbysOne"
+          :key="hobby.hobbyTitle"
+        >
           <span class="hobby-object-child">
-            <h3>Downhill</h3>
-          </span>
-          <span class="hobby-object-child">
-            <h3>Gaming</h3>
+            <h3>{{ hobby.hobbyTitle }}</h3>
           </span>
         </div>
-        <div class="hobby-object-under-parent">
+        <div
+          class="hobby-object-under-parent"
+          v-for="hobby in hobbysTwo"
+          :key="hobby.hobbyTitle"
+        >
           <span class="hobby-object-child">
-            <h3>Programmer</h3>
-          </span>
-          <span class="hobby-object-child">
-            <h3>Draw</h3>
+            <h3>{{ hobby.hobbyTitle }}</h3>
           </span>
         </div>
       </div>
@@ -73,6 +75,14 @@ export default {
       isNotActive: true,
       showIFrame: true,
       windowWidth: 10,
+      hobbysOne: [
+        { id: 1, hobbyTitle: "Downhiler", hobbyModal: "I like" },
+        { id: 2, hobbyTitle: "Programmer", hobbyModal: "I like" },
+      ],
+      hobbysTwo: [
+        { id: 3, hobbyTitle: "Gamer", hobbyModal: "I like" },
+        { id: 4, hobbyTitle: "Drawer", hobbyModal: "I like" },
+      ],
       projects: [
         {
           projectTitle: "Portfolio",
@@ -193,6 +203,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hobby-object-under-parent {
@@ -258,6 +269,26 @@ export default {
 .flip-card-back {
   background-color: rgb(249, 249, 249);
   transform: rotateY(180deg);
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 @media screen and (max-width: 668px) {
   .hobby-object-child h3 {
