@@ -276,6 +276,7 @@ export default {
 .flip-card-back {
   background-color: rgb(249, 249, 249);
   transform: rotateY(180deg);
+  line-break: strict;
 }
 .modal {
   display: none;
