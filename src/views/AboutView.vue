@@ -225,6 +225,15 @@ export default {
   background-color: rgb(249, 249, 249);
   border: 0.65px solid rgb(218, 218, 218);
   text-align: center;
+  transition-duration: 0.75s;
+}
+.hobby-object-child h3:hover {
+  transform: scale(1.05);
+  transition-duration: 0.75s;
+  cursor: grab;
+}
+.hobby-object-child h3:active {
+  cursor: grabbing;
 }
 .projects-object-parent {
   display: flex;
@@ -306,6 +315,12 @@ export default {
   color: #000000;
   font-size: 35px;
   font-weight: bold;
+}
+.close:hover {
+  cursor: grab;
+}
+.close:active {
+  cursor: grabbing;
 }
 @media screen and (max-width: 668px) {
   .hobby-object-child h3 {

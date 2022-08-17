@@ -96,6 +96,13 @@ body {
   border: #353535;
   transition-duration: 0.5s;
 }
+.dark-theme .modal-content {
+  background-color: #222222;
+  color: rgb(167, 167, 167);
+}
+.dark-theme .close {
+  color: rgb(167, 167, 167);
+}
 .light-theme {
   margin: 0;
   background-color: white;
