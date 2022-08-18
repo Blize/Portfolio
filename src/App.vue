@@ -97,7 +97,7 @@ body {
   transition-duration: 0.5s;
 }
 .dark-theme .modal-content {
-  background-color: #222222;
+  background-color: #353535;
   color: rgb(167, 167, 167);
 }
 .dark-theme .close {
