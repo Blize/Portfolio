@@ -12,13 +12,13 @@
       <h4>
         I am a 17 year old programmer and designer. I am at my second year at
         swisscom. I am an application developer, and have experienced many areas
-        of computer science. Below here you can see my hoobys and more.
+        of computer science. Below here you can see my hobbies and more.
       </h4>
     </div>
 
     <div class="hobby">
       <div class="title-hobby">
-        <h1>Hobbys</h1>
+        <h1>Hobbies</h1>
       </div>
       <div class="hobby-object-parent">
         <div
@@ -73,7 +73,7 @@ export default {
       showIFrame: true,
       windowWidth: 10,
       hobbys: [
-        { id: 1, hobbyTitle: "Downhiler", hobbyModal: "WIP 1" },
+        { id: 1, hobbyTitle: "Downhiller", hobbyModal: "WIP 1" },
         { id: 2, hobbyTitle: "Programmer", hobbyModal: "WIP 2" },
         { id: 3, hobbyTitle: "Gamer", hobbyModal: "WIP 3" },
         { id: 4, hobbyTitle: "Drawer", hobbyModal: "WIP 4" },
@@ -219,7 +219,7 @@ export default {
 .hobby-object-child h3 {
   height: 5rem;
   width: 10rem;
-  margin: 1rem;
+  margin: 1rem 0.25rem 0.25rem 1rem;
   padding: 0.75rem;
   border-radius: 6px;
   background-color: rgb(249, 249, 249);
