@@ -88,7 +88,7 @@ export default {
 					projectTitle: 'Reddit-Bot',
 					projectInfo:
 						'This is a small Bot build with Python in school with some friends. You can send messages directly via Reddit.',
-					projectURL: 'https://blize.vercel.app/src/code',
+					projectURL: 'https://github.com/Blize/Portfolio',
 				},
 			],
 		}

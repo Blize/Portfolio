@@ -52,7 +52,6 @@
 	background-color: #ddd;
 	border-radius: 12px;
 }
-
 .skills {
 	text-align: right;
 	padding: 10px 5px 10px 0;
