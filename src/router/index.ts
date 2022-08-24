@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ImprintView from "../views/ImprintView.vue";
 import PythonSourceCode from "../views/PythonSourceCode.vue";
+import Skills from "../views/Skills.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -19,6 +20,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/imprint",
     name: "imprint",
     component: ImprintView,
+  },
+  {
+    path: "/skills",
+    name: "/skills",
+    component: Skills,
   },
   {
     path: "/src/code",

@@ -6,7 +6,8 @@
 		"format": "prettier --write \"src\"",
 		"lint": "eslint --fix --ext .js,.ts,.vue .",
 		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build"
+		"build": "vue-cli-service build",
+		"start": "vue-cli-service start"
 	},
 	"dependencies": {
 		"chart.js": "^3.9.1",
