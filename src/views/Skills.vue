@@ -107,6 +107,7 @@
 }
 .python {
 	width: 35%;
+	color: black;
 	background: linear-gradient(90deg, rgb(72, 119, 161) 50%, rgb(249, 241, 98) 50%);
 }
 .ger {
@@ -121,11 +122,13 @@
 }
 .eng {
 	width: 75%;
+	color: black;
 	border: 0.25px solid gray;
 	background: linear-gradient(0deg, rgb(255, 255, 255) 70%, rgb(184, 43, 53) 30%);
 }
 .fr {
 	width: 30%;
+	color: black;
 	border: 0.25px solid gray;
 	background: linear-gradient(to right, blue 33%, white 33%, white 66%, red 66%);
 }
