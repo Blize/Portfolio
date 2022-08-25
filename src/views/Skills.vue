@@ -1,6 +1,9 @@
 <template>
 	<div class="parent">
-		<h1 class="parent-title">My Skills</h1>
+		<div class="parent-title">
+			<h1>My Skills</h1>
+			<h4>Here you have a quick overview of my Skills in different categories</h4>
+		</div>
 
 		<div class="skills-programming">
 			<h2 class="title">Developer</h2>
@@ -80,7 +83,13 @@
 	min-height: calc(100vh - 61px - 61px);
 	padding: 3rem 5rem 2rem 5rem;
 }
-
+.parent-title {
+	display: flex;
+	align-items: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	text-align: center;
+}
 .container {
 	width: 100%;
 	background-color: #ddd;
