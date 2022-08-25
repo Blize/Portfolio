@@ -1,6 +1,6 @@
 <template>
 	<div class="parent">
-		<h1>My Skills</h1>
+		<h1 class="parent-title">My Skills</h1>
 
 		<div class="skills-programming">
 			<h2 class="title">Developer</h2>
@@ -146,5 +146,12 @@
 }
 .title {
 	margin-top: 5rem;
+}
+@media screen and (max-width: 736px) {
+	.parent-title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
 </style>
