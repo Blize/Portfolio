@@ -2,39 +2,60 @@
 	<div class="parent">
 		<h1>My Skills</h1>
 
-		<p>Vue</p>
-		<div class="container">
-			<div class="skills vue">95%</div>
+		<div class="skills-programming">
+			<h2>Developer</h2>
+			<p>Vue</p>
+			<div class="container">
+				<div class="skills vue">95%</div>
+			</div>
+
+			<p>JavaScript</p>
+			<div class="container">
+				<div class="skills js">90%</div>
+			</div>
+
+			<p>HTML</p>
+			<div class="container">
+				<div class="skills html">85%</div>
+			</div>
+
+			<p>CSS</p>
+			<div class="container">
+				<div class="skills css">85%</div>
+			</div>
+
+			<p>BASH</p>
+			<div class="container">
+				<div class="skills bash">42%</div>
+			</div>
+
+			<p>TypeScript</p>
+			<div class="container">
+				<div class="skills ts">40%</div>
+			</div>
+
+			<p>Python</p>
+			<div class="container">
+				<div class="skills python">35%</div>
+			</div>
 		</div>
 
-		<p>JavaScript</p>
-		<div class="container">
-			<div class="skills js">90%</div>
-		</div>
+		<div class="skills-language">
+			<h2>Languages</h2>
+			<p>German</p>
+			<div class="container">
+				<div class="skills ger">Native Language</div>
+			</div>
 
-		<p>HTML</p>
-		<div class="container">
-			<div class="skills html">85%</div>
-		</div>
+			<p>English</p>
+			<div class="container">
+				<div class="skills eng">Fluent</div>
+			</div>
 
-		<p>CSS</p>
-		<div class="container">
-			<div class="skills css">85%</div>
-		</div>
-
-		<p>BASH</p>
-		<div class="container">
-			<div class="skills bash">42%</div>
-		</div>
-
-		<p>TypeScript</p>
-		<div class="container">
-			<div class="skills ts">40%</div>
-		</div>
-
-		<p>Python</p>
-		<div class="container">
-			<div class="skills python">35%</div>
+			<p>French</p>
+			<div class="container">
+				<div class="skills fr">Basics</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -58,6 +79,7 @@
 	color: white;
 	border-radius: 12px;
 }
+
 .vue {
 	width: 95%;
 	background-color: rgb(95, 172, 128);
@@ -86,5 +108,25 @@
 .python {
 	width: 35%;
 	background: linear-gradient(90deg, rgb(72, 119, 161) 50%, rgb(249, 241, 98) 50%);
+}
+.ger {
+	width: 100%;
+	background: -webkit-linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%),
+		-webkit-linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
+	background: -o-linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%),
+		-o-linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
+	background: -moz-linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%),
+		-moz-linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
+	background: linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
+}
+.eng {
+	width: 75%;
+	border: 0.25px solid gray;
+	background: linear-gradient(0deg, rgb(255, 255, 255) 70%, rgb(184, 43, 53) 30%);
+}
+.fr {
+	width: 30%;
+	border: 0.25px solid gray;
+	background: linear-gradient(to right, blue 33%, white 33%, white 66%, red 66%);
 }
 </style>
