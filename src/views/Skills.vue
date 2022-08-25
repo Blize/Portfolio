@@ -3,7 +3,7 @@
 		<h1>My Skills</h1>
 
 		<div class="skills-programming">
-			<h2>Developer</h2>
+			<h2 class="title">Developer</h2>
 			<p>Vue</p>
 			<div class="container">
 				<div class="skills vue">95%</div>
@@ -41,7 +41,7 @@
 		</div>
 
 		<div class="skills-language">
-			<h2>Languages</h2>
+			<h2 class="title">Languages</h2>
 			<p>German</p>
 			<div class="container">
 				<div class="skills ger">Native Language</div>
@@ -55,6 +55,14 @@
 			<p>French</p>
 			<div class="container">
 				<div class="skills fr">Basics</div>
+			</div>
+		</div>
+
+		<div class="skills-language">
+			<h2 class="title">Miscellaneous</h2>
+			<p>Agile Working</p>
+			<div class="container">
+				<div class="skills ag">80%</div>
 			</div>
 		</div>
 	</div>
@@ -124,12 +132,19 @@
 	width: 75%;
 	color: black;
 	border: 0.25px solid gray;
-	background: linear-gradient(0deg, rgb(255, 255, 255) 70%, rgb(184, 43, 53) 30%);
+	background-color: rgb(184, 43, 53);
 }
 .fr {
 	width: 30%;
 	color: black;
 	border: 0.25px solid gray;
 	background: linear-gradient(to right, blue 33%, white 33%, white 66%, red 66%);
+}
+.ag {
+	width: 80%;
+	background-color: rgb(72, 52, 52);
+}
+.title {
+	margin-top: 5rem;
 }
 </style>
