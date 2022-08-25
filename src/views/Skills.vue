@@ -24,6 +24,11 @@
 				<div class="skills css">85%</div>
 			</div>
 
+			<p>Express + Node.js, MariaDB</p>
+			<div class="container">
+				<div class="skills ejsm">60%</div>
+			</div>
+
 			<p>BASH</p>
 			<div class="container">
 				<div class="skills bash">42%</div>
@@ -104,7 +109,10 @@
 	width: 85%;
 	background-color: rgb(51, 98, 220);
 }
-
+.ejsm {
+	width: 60%;
+	background: linear-gradient(90deg, rgb(50, 50, 50) 50%, rgb(190, 155, 114));
+}
 .bash {
 	width: 42%;
 	background-color: rgb(64, 71, 74);
