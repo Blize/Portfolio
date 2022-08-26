@@ -24,6 +24,7 @@ export default {
 	name: 'Header',
 	data() {
 		return {
+			showMenu: false,
 			theme: 'light',
 			windowWidth: 10,
 		}
@@ -35,12 +36,16 @@ export default {
 			window.addEventListener('resize', this.onResize)
 		})
 	},
+	mounted() {
+		const theme = localStorage.getItem('myTheme')
+		this.theme = theme
+	},
 	methods: {
 		changeTheme() {
+			const key = 'myTheme'
 			this.$emit('changeTheme')
 			this.theme = this.theme === 'dark' ? 'light' : 'dark'
-			const key = 'DarkOrLightMode'
-			window.localStorage.setItem(key, this.theme)
+			localStorage.setItem(key, this.theme)
 		},
 		onResize() {
 			this.windowWidth = window.innerWidth
