@@ -105,30 +105,93 @@
 .vue {
 	width: 95%;
 	background-color: rgb(95, 172, 128);
+	animation: vue 1s;
+}
+@keyframes vue {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 95%;
+	}
 }
 .js {
 	width: 90%;
 	background-color: rgb(243, 222, 80);
+	animation: js 1s;
+}
+@keyframes js {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 90%;
+	}
 }
 .html {
 	width: 85%;
 	background-color: rgb(214, 103, 57);
+	animation: html 1s;
+}
+@keyframes html {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 85%;
+	}
 }
 .css {
 	width: 85%;
 	background-color: rgb(51, 98, 220);
+	animation: css 1s;
+}
+@keyframes css {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 85%;
+	}
 }
 .ejsm {
 	width: 60%;
 	background: linear-gradient(90deg, rgb(50, 50, 50) 50%, rgb(190, 155, 114));
+	animation: ejsm 1s;
+}
+@keyframes ejsm {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 60%;
+	}
 }
 .bash {
 	width: 42%;
 	background-color: rgb(64, 71, 74);
+	animation: bash 1s;
+}
+@keyframes bash {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 42%;
+	}
 }
 .ts {
 	width: 40%;
 	background-color: rgb(67, 120, 192);
+	animation: 1s ts;
+}
+@keyframes ts {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 40%;
+	}
 }
 .python {
 	width: 35%;

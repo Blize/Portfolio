@@ -46,6 +46,7 @@
 						<h2>{{ project.projectTitle }}</h2>
 						<h4>{{ project.projectInfo }}</h4>
 					</div>
+
 					<div class="flip-card-back">
 						<h1>{{ project.projectTitle }}</h1>
 						<p>{{ project.projectURL }}</p>
@@ -74,8 +75,7 @@ export default {
 			projects: [
 				{
 					projectTitle: 'Portfolio',
-					projectInfo:
-						'The Portfolio is a little webapplication built by myself. This webapplication has only a frontend.',
+					projectInfo: 'The Portfolio is a little webapplication built by myself. It is written in Vue 3.',
 					projectURL: 'https://blize.vercel.app',
 				},
 				{
@@ -214,7 +214,7 @@ export default {
 	background-color: transparent;
 	width: 300px;
 	height: 325px;
-	perspective: 1000px;
+	perspective: 800px;
 	margin-bottom: 4rem;
 }
 
