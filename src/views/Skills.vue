@@ -1,6 +1,6 @@
 <template>
-	<div class="parent">
-		<div class="parent-title">
+	<div class="parent-skills">
+		<div class="parent-title-skills">
 			<h1>My Skills</h1>
 			<h4>Here you have a quick overview of my Skills in different categories</h4>
 		</div>
@@ -8,42 +8,42 @@
 		<div class="skills-programming">
 			<h2 class="title">Developer</h2>
 			<p>Vue</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills vue">95%</div>
 			</div>
 
 			<p>JavaScript</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills js">90%</div>
 			</div>
 
 			<p>HTML</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills html">85%</div>
 			</div>
 
 			<p>CSS</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills css">85%</div>
 			</div>
 
 			<p>Express + Node.js, MariaDB</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills ejsm">60%</div>
 			</div>
 
 			<p>BASH</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills bash">42%</div>
 			</div>
 
 			<p>TypeScript</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills ts">40%</div>
 			</div>
 
 			<p>Python</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills python">35%</div>
 			</div>
 		</div>
@@ -51,17 +51,17 @@
 		<div class="skills-language">
 			<h2 class="title">Languages</h2>
 			<p>German</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills ger">Native Language</div>
 			</div>
 
 			<p>English</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills eng">Fluent</div>
 			</div>
 
 			<p>French</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills fr">Basics</div>
 			</div>
 		</div>
@@ -69,7 +69,7 @@
 		<div class="skills-language">
 			<h2 class="title">Miscellaneous</h2>
 			<p>Agile Working</p>
-			<div class="container">
+			<div class="container-skills">
 				<div class="skills ag">80%</div>
 			</div>
 		</div>
@@ -78,19 +78,19 @@
 
 <script></script>
 
-<style scoped>
-.parent {
+<style>
+.parent-skills {
 	min-height: calc(100vh - 61px - 61px);
 	padding: 3rem 5rem 2rem 5rem;
 }
-.parent-title {
+.parent-title-skills {
 	display: flex;
 	align-items: flex-start;
 	align-items: flex-start;
 	flex-direction: column;
 	text-align: center;
 }
-.container {
+.container-skills {
 	width: 100%;
 	background-color: #ddd;
 	border-radius: 12px;
@@ -197,6 +197,15 @@
 	width: 35%;
 	color: black;
 	background: linear-gradient(90deg, rgb(72, 119, 161) 50%, rgb(249, 241, 98) 50%);
+	animation: 1s python;
+}
+@keyframes python {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 35%;
+	}
 }
 .ger {
 	width: 100%;
@@ -207,6 +216,7 @@
 	background: -moz-linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%),
 		-moz-linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
 	background: linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
+	animation: 1s ger;
 }
 .eng {
 	width: 75%;
@@ -228,7 +238,10 @@
 	margin-top: 5rem;
 }
 @media screen and (max-width: 736px) {
-	.parent-title {
+	.parent-skills {
+		padding: 3rem 1rem 2rem 1.2rem;
+	}
+	.parent-title-skills {
 		display: flex;
 		align-items: center;
 		justify-content: center;

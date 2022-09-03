@@ -20,7 +20,7 @@
 				<h1>Hobbies</h1>
 			</div>
 			<div class="hobby-object-parent">
-				<div class="hobby-object-under-parent" v-for="hobby in hobbys" :key="hobby.hobbyTitle">
+				<div class="hobby-object-under-parent" v-for="hobby in hobbies" :key="hobby.hobbyTitle">
 					<span class="hobby-object-child" @click="openModal(hobby.id)">
 						<h3>{{ hobby.hobbyTitle }}</h3>
 					</span>
@@ -64,7 +64,7 @@ export default {
 			isNotActive: true,
 			showIFrame: true,
 			windowWidth: 10,
-			hobbys: [
+			hobbies: [
 				{ id: 1, hobbyTitle: 'Downhiller', hobbyModal: 'WIP 1' },
 				{ id: 2, hobbyTitle: 'Programmer', hobbyModal: 'WIP 2' },
 				{ id: 3, hobbyTitle: 'Gamer', hobbyModal: 'WIP 3' },
@@ -106,7 +106,7 @@ export default {
 	},
 	methods: {
 		openModal(id) {
-			let myHobby = this.hobbys.filter((hobby) => hobby.id === id)[0]
+			let myHobby = this.hobbies.filter((hobby) => hobby.id === id)[0]
 			this.modalText = myHobby.hobbyModal
 			let modal = document.getElementsByClassName('modal')[0]
 			modal.style.display = 'block'
@@ -268,6 +268,7 @@ export default {
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.6);
 }
+
 .modal-content {
 	background-color: #fefefe;
 	margin: auto;

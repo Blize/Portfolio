@@ -95,6 +95,9 @@ body {
 	border: #353535;
 	transition-duration: 0.5s;
 }
+.dark-theme .container-skills {
+	background-color: #5b5656;
+}
 .dark-theme .modal-content {
 	background-color: #353535;
 	color: rgb(167, 167, 167);
