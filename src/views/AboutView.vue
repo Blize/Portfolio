@@ -1,5 +1,5 @@
 <template>
-	<div class="about">
+	<div class="parent-about">
 		<div class="fly-in-text" :class="{ hidden: isNotActive }">
 			<h1>A</h1>
 			<h1>B</h1>
@@ -120,8 +120,9 @@ export default {
 </script>
 
 <style>
-.about {
+.parent-about {
 	min-height: calc(100vh - 61px - 61px);
+	padding: 3rem 7rem 0rem 7rem;
 }
 .fly-in-text {
 	display: flex;
@@ -132,6 +133,7 @@ export default {
 .fly-in-text h1 {
 	padding: 5px;
 	opacity: 1;
+	font-size: 4rem;
 	transition: all 1.3s ease;
 }
 .fly-in-text.hidden h1 {
@@ -290,7 +292,10 @@ export default {
 .close:active {
 	cursor: grabbing;
 }
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 736px) {
+	.parent-hobby {
+		padding: 3rem 0rem 0rem 0rem;
+	}
 	.hobby-object-child h3 {
 		width: 7.75rem;
 	}
