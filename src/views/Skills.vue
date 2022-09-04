@@ -99,12 +99,12 @@
 	text-align: right;
 	padding: 10px 5px 10px 0;
 	color: white;
+	background-color: rgb(145, 150, 152);
 	border-radius: 12px;
 }
 
 .vue {
 	width: 95%;
-	background-color: rgb(95, 172, 128);
 	animation: vue 1s;
 }
 @keyframes vue {
@@ -117,7 +117,6 @@
 }
 .js {
 	width: 90%;
-	background-color: rgb(243, 222, 80);
 	animation: js 1s;
 }
 @keyframes js {
@@ -130,7 +129,6 @@
 }
 .html {
 	width: 85%;
-	background-color: rgb(214, 103, 57);
 	animation: html 1s;
 }
 @keyframes html {
@@ -143,7 +141,6 @@
 }
 .css {
 	width: 85%;
-	background-color: rgb(51, 98, 220);
 	animation: css 1s;
 }
 @keyframes css {
@@ -156,7 +153,6 @@
 }
 .ejsm {
 	width: 60%;
-	background: linear-gradient(90deg, rgb(50, 50, 50) 50%, rgb(190, 155, 114));
 	animation: ejsm 1s;
 }
 @keyframes ejsm {
@@ -169,7 +165,6 @@
 }
 .bash {
 	width: 42%;
-	background-color: rgb(64, 71, 74);
 	animation: bash 1s;
 }
 @keyframes bash {
@@ -182,7 +177,6 @@
 }
 .ts {
 	width: 40%;
-	background-color: rgb(67, 120, 192);
 	animation: 1s ts;
 }
 @keyframes ts {
@@ -195,8 +189,6 @@
 }
 .python {
 	width: 35%;
-	color: black;
-	background: linear-gradient(90deg, rgb(72, 119, 161) 50%, rgb(249, 241, 98) 50%);
 	animation: 1s python;
 }
 @keyframes python {
@@ -209,30 +201,16 @@
 }
 .ger {
 	width: 100%;
-	background: -webkit-linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%),
-		-webkit-linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
-	background: -o-linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%),
-		-o-linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
-	background: -moz-linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%),
-		-moz-linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
-	background: linear-gradient(90deg, #000 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(90deg, #dd0000 66%, #ffc608 66%);
 	animation: 1s ger;
 }
 .eng {
 	width: 75%;
-	color: black;
-	border: 0.25px solid gray;
-	background-color: rgb(184, 43, 53);
 }
 .fr {
 	width: 30%;
-	color: black;
-	border: 0.25px solid gray;
-	background: linear-gradient(to right, blue 33%, white 33%, white 66%, red 66%);
 }
 .ag {
 	width: 80%;
-	background-color: rgb(72, 52, 52);
 }
 .title {
 	margin-top: 5rem;

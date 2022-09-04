@@ -14,7 +14,7 @@ import { myDate } from '../utils/date.util.ts'
 export default {
 	data() {
 		return {
-			lastCommit: '0',
+			lastCommit: 'Today',
 		}
 	},
 	methods: {

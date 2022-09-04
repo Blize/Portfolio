@@ -98,6 +98,9 @@ body {
 .dark-theme .container-skills {
 	background-color: #5b5656;
 }
+.dark-theme .skills {
+	background-color: rgb(64, 71, 74);
+}
 .dark-theme .modal-content {
 	background-color: #353535;
 	color: rgb(167, 167, 167);
