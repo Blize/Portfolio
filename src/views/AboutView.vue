@@ -292,9 +292,12 @@ export default {
 .close:active {
 	cursor: grabbing;
 }
-@media screen and (max-width: 736px) {
-	.parent-hobby {
+@media screen and (max-width: 735px) {
+	.parent-about {
 		padding: 3rem 0rem 0rem 0rem;
+	}
+	div.fly-in-text {
+		margin-bottom: -1rem;
 	}
 	.hobby-object-child h3 {
 		width: 7.75rem;
