@@ -2,7 +2,7 @@
 	<footer class="footer">
 		<h5><router-link to="/imprint" class="imprint">Imprint</router-link></h5>
 		<div class="popup" @mouseover="popUpFunction()" @mouseout="popUpFunction()">
-			<h5>Version 0.0.5</h5>
+			<h5>Version 0.0.6</h5>
 			<span class="popuptext" id="myPopup">Last commit: {{ lastCommit }}</span>
 		</div>
 		<h5>@2022</h5>
