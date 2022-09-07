@@ -1,104 +1,49 @@
 <template>
-	<div class="curtain">
-		<div class="curtain__wrapper">
-			<input type="checkbox" checked @click="disableInput()" :disabled="validate" />
-
-			<div class="curtain__panel curtain__panel--left">
-				<h1>Wel</h1>
-			</div>
-
-			<div class="curtain__content">
-				<h2>Blize</h2>
-			</div>
-
-			<div class="curtain__panel curtain__panel--right">
-				<h1>come</h1>
-			</div>
+	<div class="parent-home">
+		<div class="content">
+			<h2>Blize</h2>
+			<h2>Blize</h2>
 		</div>
 	</div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-	name: 'HomeView',
-	data() {
-		return {
-			validate: false,
-		}
-	},
-	methods: {
-		disableInput() {
-			this.validate = true
-		},
-	},
-})
+<script>
+export default {}
 </script>
 
-<style lang="scss">
-.curtain {
-	width: 100%;
-	height: calc(100vh -61px -61px);
-	overflow: hidden;
+<style>
+div.parent-home {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	height: 100vh;
+}
+.content h2 {
+	color: #fff;
+	font-size: 8em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
 
-	&__wrapper {
-		width: 100%;
-		height: 100%;
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #1d67a8;
+}
 
-		input[type='checkbox'] {
-			position: absolute;
-			cursor: pointer;
-			width: 99.5%;
-			height: 100%;
-			z-index: 100;
-			opacity: 0;
-			height: calc(100vh -61px -61px);
+.content h2:nth-child(2) {
+	color: #1d67a8;
+	animation: liquid 4s ease-in-out infinite;
+}
 
-			&:checked {
-				& ~ div.curtain__panel--left {
-					transform: translateX(0);
-				}
-
-				& ~ div.curtain__panel--right {
-					transform: translateX(0);
-				}
-			}
-		}
+@keyframes liquid {
+	0%,
+	100% {
+		clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
 	}
 
-	&__panel {
-		display: flex;
-		align-items: center;
-		background: rgb(250, 250, 250);
-		color: rgb(0, 0, 0);
-		float: left;
-		position: relative;
-		width: 50%;
-		height: 100vh;
-		transition: all 1s ease-out;
-		z-index: 2;
-
-		&--left {
-			justify-content: flex-end;
-			transform: translateX(-100%);
-		}
-		&--right {
-			justify-content: flex-start;
-			transform: translateX(100%);
-		}
-	}
-
-	&__content {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: calc(100vh -61px -61px);
-		padding: 1rem 0 0 0;
-		position: absolute;
-		text-align: center;
-		z-index: 1;
-		width: 100%;
+	50% {
+		clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
 	}
 }
 </style>
