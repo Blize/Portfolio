@@ -6,13 +6,36 @@
 
 			<div class="table-of-content">
 				<div class="naming-of-code">
-					<h2 class="table-title">Naming</h2>
-					<h3>
-						My functions are written in camel-case, important is here that the name always should describe what the
-						function does
-					</h3>
 					<div>
-						<img src="../assets/NamingOfFunctions.png" width="1135" />
+						<h2 class="table-title">Naming</h2>
+						<h3 class="table-text">
+							My FUNCTIONS are written in camel-case, important is here that the name always should describe what the
+							function does
+						</h3>
+						<div>
+							<img src="../assets/NamingOfFunctions.png" width="1135" />
+						</div>
+						<h3 class="table-text">
+							My CLASSES and ID's are written in kebab-case. Also I try to make class names that make sense
+						</h3>
+						<div>
+							<img src="../assets/NamingOfClass.png" width="1135" />
+						</div>
+					</div>
+
+					<div>
+						<h2 class="table-title">Dynamic</h2>
+						<h3 class="table-text">
+							I try to write dynamic HTML and Java Script/Type Script Code. As you can see here i insert my content
+							dynamic into the HTML
+						</h3>
+						<div>
+							<img src="../assets/DynamicHTML.png" width="1135" />
+						</div>
+						<h3 class="table-text">As well as using util function to not have code duplication</h3>
+						<div>
+							<img src="../assets/DynamicUtilFunction.png" width="1135" />
+						</div>
 					</div>
 				</div>
 			</div>
@@ -37,10 +60,18 @@ img {
 .main-content-wrapper {
 	text-align: center;
 }
+.table-of-content {
+	margin-bottom: 2rem;
+}
 .naming-of-code {
-	margin-top: 5rem;
+	margin-top: 4rem;
 }
 .table-title {
+	text-align: left;
+	font-size: 2rem;
+	margin-top: 20%;
+}
+.table-text {
 	text-align: left;
 }
 </style>
