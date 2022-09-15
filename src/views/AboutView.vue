@@ -88,7 +88,7 @@ export default {
 			projects: [
 				{
 					projectTitle: 'Portfolio',
-					projectInfo: 'The Portfolio is a little webapplication built by myself. It is written in Vue 3.',
+					projectInfo: 'The Portfolio is a little web-application built by myself. It is written in Vue 3.',
 					projectURL: 'https://blize.vercel.app',
 				},
 				{

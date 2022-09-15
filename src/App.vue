@@ -47,51 +47,58 @@ body {
 	padding: 0;
 	width: 100%;
 }
+:root {
+	--dark-background: #3d3d3d;
+	--dark-secondary-background: #353535;
+	--dark-font-color: rgb(167, 167, 167);
+	--dark-border-color: #000;
+	--dark-upper-background: #454343;
+
+	--light-background: white;
+	--light-secondary-background: whitesmoke;
+	--light-font-color: black;
+	--light-border-color: rgb(104, 104, 104);
+}
+
 .dark-theme {
 	top: 0;
-	background-color: #3d3d3d;
-	color: rgb(167, 167, 167);
-	border: rgb(0, 0, 0);
+	background-color: var(--dark-background);
+	color: var(--dark-font-color);
+	border: var(--dark-border-color);
 	transition-duration: 0.5s;
 }
 .dark-theme a {
-	color: rgb(167, 167, 167);
+	color: var(--dark-font-color);
 	text-decoration: none;
 }
 .dark-theme span {
-	color: rgb(167, 167, 167);
+	color: var(--dark-font-color);
 }
 .dark-theme .projects-child {
-	background-color: #454343;
-	border: #00000000;
+	background-color: var(--dark-upper-background);
+	border: var(--dark-border-color);
 }
 .dark-theme .hobby-object-child h3 {
-	background-color: #454343;
-	border: #00000000;
+	background-color: var(--dark-upper-background);
+	border: var(--dark-border-color);
 }
 .dark-theme .flip-card-front {
-	background-color: #454343;
-	border: #00000000;
-	color: rgb(167, 167, 167);
+	background-color: var(--dark-upper-background);
+	border: var(--dark-border-color);
+	color: var(--dark-font-color);
 }
 .dark-theme .flip-card-back {
-	background-color: #454343;
-	border: #00000000;
-}
-.dark-theme .curtain {
-	&__panel {
-		background-color: #353535;
-		color: rgb(167, 167, 167);
-	}
+	background-color: var(--dark-upper-background);
+	border: var(--dark-border-color);
 }
 .dark-theme .footer {
 	background-color: #222222;
-	border-color: #222222;
+	border: #222222;
 }
 .dark-theme nav {
 	top: 0;
-	background-color: #353535;
-	color: rgb(167, 167, 167);
+	background-color: var(--dark-secondary-background);
+	color: var(--dark-font-color);
 	border: #353535;
 	transition-duration: 0.5s;
 }
@@ -102,28 +109,28 @@ body {
 	background-color: rgb(64, 71, 74);
 }
 .dark-theme .modal-content {
-	background-color: #353535;
-	color: rgb(167, 167, 167);
+	background-color: var(--dark-secondary-background);
+	color: var(--dark-font-color);
 }
 .dark-theme .close {
-	color: rgb(167, 167, 167);
+	color: var(--dark-font-color);
 }
 .light-theme {
 	margin: 0;
-	background-color: white;
-	color: black;
+	background-color: var(--light-background);
+	color: var(--light-font-color);
 	border: black;
 	transition-duration: 0.5s;
 }
 .light-theme a {
-	color: black;
+	color: var(--light-font-color);
 	text-decoration: none;
 }
 .light-theme nav {
 	margin: 0;
-	background-color: whitesmoke;
-	color: black;
-	border: rgb(104, 104, 104);
+	background-color: var(--light-secondary-background);
+	color: var(--light-font-color);
+	border: var(--light-border-color);
 	transition-duration: 0.5s;
 }
 </style>
