@@ -1,17 +1,46 @@
 <template>
 	<div class="parent-home">
-		<div class="content">
-			<h2>Blize</h2>
-			<h2>Blize</h2>
+		<h1 class="title">Blize</h1>
+		<div class="parent-animation-under-title">
+			<div class="fly-in-title"><h2>I love</h2></div>
+
+			<div class="fly-in-under-title" :class="{ hidden: isNotActive }">
+				<h2>{{ chosenTitle }}</h2>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-export default {}
+export default {
+	data() {
+		return {
+			title: ['coding', 'designing', 'drawing', 'creating', 'biking', 'gaming'],
+			chosenTitle: '',
+			isNotActive: true,
+		}
+	},
+	mounted() {
+		this.changeTitle()
+		setTimeout(() => {
+			this.isNotActive = false
+		}, 500)
+	},
+	methods: {
+		changeTitle() {
+			this.chosenTitle = this.title[Math.floor(Math.random() * this.title.length)]
+			window.setInterval(() => {
+				this.chooseRandomTitle()
+			}, 3000)
+		},
+		chooseRandomTitle() {
+			this.chosenTitle = this.title[Math.floor(Math.random() * this.title.length)]
+		},
+	},
+}
 </script>
 
-<style>
+<style scoped>
 div.parent-home {
 	display: flex;
 	align-items: center;
@@ -19,31 +48,23 @@ div.parent-home {
 	flex-direction: column;
 	height: 100vh;
 }
-.content h2 {
-	color: #fff;
-	font-size: 8em;
-	position: absolute;
-	transform: translate(-50%, -50%);
+.title {
+	font-size: 5rem;
 }
-
-.content h2:nth-child(1) {
-	color: transparent;
-	-webkit-text-stroke: 2px #1d67a8;
+.parent-animation-under-title {
+	display: flex;
+	flex-direction: row;
 }
-
-.content h2:nth-child(2) {
-	color: #1d67a8;
-	animation: liquid 4s ease-in-out infinite;
+.fly-in-title {
+	padding-left: -0.25rem;
 }
-
-@keyframes liquid {
-	0%,
-	100% {
-		clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-	}
-
-	50% {
-		clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
-	}
+.fly-in-under-title {
+	padding-left: 0.25rem;
+	opacity: 1;
+	transition: all 0.5s ease-out;
+}
+.fly-in-under-title.hidden {
+	opacity: 0;
+	transform: translateY(50px);
 }
 </style>

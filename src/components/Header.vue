@@ -31,10 +31,10 @@ export default {
 	},
 	emits: ['changeTheme'],
 	created() {
-		this.windowWidth = window.innerHeight
 		this.$nextTick(() => {
 			window.addEventListener('resize', this.onResize)
 		})
+		this.windowWidth = window.innerWidth
 	},
 	mounted() {
 		const theme = localStorage.getItem('myTheme')
