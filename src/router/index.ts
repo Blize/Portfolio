@@ -2,8 +2,8 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ImprintView from '../views/ImprintView.vue'
-import PythonSourceCode from '../views/PythonSourceCode.vue'
-import Skills from '../views/Skills.vue'
+import SkillsView from '../views/SkillsView.vue'
+import DeveloperView from '../views/DeveloperView.vue'
 
 const routes: Array<RouteRecordRaw> = [
 	{
@@ -23,8 +23,13 @@ const routes: Array<RouteRecordRaw> = [
 	},
 	{
 		path: '/skills',
-		name: '/skills',
-		component: Skills,
+		name: 'skills',
+		component: SkillsView,
+	},
+	{
+		path: '/developer',
+		name: 'developer',
+		component: DeveloperView,
 	},
 ]
 
