@@ -39,6 +39,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="finishing-words">
+				<h3>If you wanna see more of my code go to my <a href="https://github.com/Blize">Github</a> Page</h3>
+			</div>
 		</div>
 	</div>
 </template>
@@ -73,5 +76,8 @@ img {
 }
 .table-text {
 	text-align: left;
+}
+.finishing-words {
+	margin-top: 15%;
 }
 </style>

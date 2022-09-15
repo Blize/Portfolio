@@ -115,6 +115,9 @@ body {
 .dark-theme .close {
 	color: var(--dark-font-color);
 }
+.dark-theme .button-to-developer {
+	background-color: var(--dark-secondary-background);
+}
 .light-theme {
 	margin: 0;
 	background-color: var(--light-background);
