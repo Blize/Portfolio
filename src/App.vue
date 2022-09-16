@@ -58,6 +58,8 @@ body {
 	--light-secondary-background: whitesmoke;
 	--light-font-color: black;
 	--light-border-color: rgb(104, 104, 104);
+
+	--shadow: box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .dark-theme {
@@ -135,5 +137,13 @@ body {
 	color: var(--light-font-color);
 	border: var(--light-border-color);
 	transition-duration: 0.5s;
+}
+.light-theme .window-error {
+	border: var(--light-border-color);
+	background-color: var(--light-secondary-background);
+}
+.dark-theme .window-error {
+	border: var(--dark-border-color);
+	background-color: var(--dark-secondary-background);
 }
 </style>
