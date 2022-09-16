@@ -65,7 +65,7 @@ body {
 	background-color: var(--dark-background);
 	color: var(--dark-font-color);
 	border: var(--dark-border-color);
-	transition-duration: 0.5s;
+	transition: all 0.5s ease-in;
 }
 .dark-theme a {
 	color: var(--dark-font-color);
