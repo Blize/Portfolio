@@ -45,7 +45,7 @@
 						</h3>
 						<div>
 							<h3>Here the classic example with KeyFrames</h3>
-							<img src="../assets/KeyFrameAnimation.png" width="1135" height="650" />
+							<img src="../assets/KeyFrameAnimation.png" width="1135" />
 						</div>
 						<h3 class="table-text">Another way of writing animations is with conditional classes</h3>
 						<div>
