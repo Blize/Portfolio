@@ -3,7 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ImprintView from '../views/ImprintView.vue'
 import SkillsView from '../views/SkillsView.vue'
-import DeveloperView from '../views/DeveloperView.vue'
+
+const DeveloperView = () => import('../views/DeveloperView.vue')
 
 const routes: Array<RouteRecordRaw> = [
 	{
