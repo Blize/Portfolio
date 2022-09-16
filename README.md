@@ -1,4 +1,5 @@
-# blize
+# Hey There 
+### This is my little Portfolio, to set it up follow the steps below
 
 ## Project setup
 ```
@@ -15,5 +16,9 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Additional information 
+
+###  - This Portfolio only has a frontend
+###  - It is only build by me
+###  - I try, that I have not to much dependencies
+
