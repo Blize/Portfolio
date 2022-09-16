@@ -107,6 +107,7 @@ export default {
 		}
 	},
 	mounted() {
+		this.closeModalOnEscape()
 		setTimeout(() => {
 			this.isNotActive = false
 		}, 250)
@@ -127,6 +128,13 @@ export default {
 		closeModal() {
 			let modal = document.getElementsByClassName('modal')[0]
 			modal.style.display = 'none'
+		},
+		closeModalOnEscape() {
+			addEventListener('keydown', (event) => {
+				if (event.key === 'Escape') {
+					this.closeModal()
+				}
+			})
 		},
 	},
 }
