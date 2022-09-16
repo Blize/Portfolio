@@ -48,7 +48,7 @@ li {
 }
 .button-to-developer {
 	background-color: rgb(223, 223, 223);
-	margin-top: 1rem;
+	margin: 1rem 0 2rem 0;
 	padding: 0.45rem;
 	border-radius: 6px;
 	transition-duration: 0.5s;
