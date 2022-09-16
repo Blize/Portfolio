@@ -65,17 +65,30 @@ export default {
 			showIFrame: true,
 			windowWidth: 10,
 			hobbies: [
-				{ id: 1, hobbyTitle: 'Downhiller', hobbyModal: 'WIP 1' },
-				{ id: 2, hobbyTitle: 'Programmer', hobbyModal: 'WIP 2' },
-				{ id: 3, hobbyTitle: 'Gamer', hobbyModal: 'WIP 3' },
-				{ id: 4, hobbyTitle: 'Drawer', hobbyModal: 'WIP 4' },
+				{
+					id: 1,
+					hobbyTitle: 'Downhill',
+					hobbyModal:
+						'I am passionate about mountain-biking, because while I am biking I can forget everything and fully concentrate on the here and now.',
+				},
+				{
+					id: 2,
+					hobbyTitle: 'Programmer',
+					hobbyModal: 'I like programming very much, because the possibilities are unlimited.',
+				},
+				{
+					id: 3,
+					hobbyTitle: 'Gamer',
+					hobbyModal: "I like to play games to isolate myself from the world, it doesn't matter which game I play",
+				},
+				{ id: 4, hobbyTitle: 'Drawer', hobbyModal: 'Sometimes I like to draw at home. Either on the iPad or on paper' },
 			],
 
 			modalText: '',
 			projects: [
 				{
 					projectTitle: 'Portfolio',
-					projectInfo: 'The Portfolio is a little webapplication built by myself. It is written in Vue 3.',
+					projectInfo: 'The Portfolio is a little web-application built by myself. It is written in Vue 3.',
 					projectURL: 'https://blize.vercel.app',
 				},
 				{

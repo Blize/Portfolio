@@ -12,8 +12,13 @@
 			<h1>Info</h1>
 			<p>
 				This Page is only build by me. The only dependency is the framework Vue.js. You can see more of my work on
-				<a href="https://github.com/Blize">Github</a>
+				<a href="https://github.com/Blize">Github</a>. But if you wanna see some code snipped's and ideas how I created
+				this website click here
 			</p>
+			<p>|</p>
+			<p>\/</p>
+
+			<router-link to="/developer" class="button-to-developer">Developer</router-link>
 		</div>
 	</div>
 </template>
@@ -40,6 +45,17 @@ li {
 .title p {
 	text-align: center;
 	margin: 0 3rem 0 3rem;
+}
+.button-to-developer {
+	background-color: rgb(223, 223, 223);
+	margin: 1rem 0 2rem 0;
+	padding: 0.45rem;
+	border-radius: 6px;
+	transition-duration: 0.5s;
+}
+.button-to-developer:hover {
+	transform: scale(1.05);
+	transition-duration: 0.5s;
 }
 @media screen and (max-width: 735px) {
 	.parent-imprint {
