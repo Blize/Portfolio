@@ -37,6 +37,27 @@
 							<img src="../assets/DynamicUtilFunction.png" width="1135" />
 						</div>
 					</div>
+
+					<div>
+						<h2 class="table-title">CSS Animations</h2>
+						<h3 class="table-text">
+							I always write my CSS Animation on my own. So I don't use a dependency. Here are some examples
+						</h3>
+						<div>
+							<h3>Here the classic example with KeyFrames</h3>
+							<img src="../assets/KeyFrameAnimation.png" width="1135" height="650" />
+						</div>
+						<h3 class="table-text">Another way of writing animations is with conditional classes</h3>
+						<div>
+							<img src="../assets/ConditionalClassHTML.png" width="1135" />
+							<h3>After our page renders we wait 0.5s and then deactivate the class</h3>
+							<img src="../assets/SetClassTrue.png" width="1135" />
+							<h3>So our animation goes from this</h3>
+							<img src="../assets/ConditionalClassHidden.png" width="1135" />
+							<h3>To this</h3>
+							<img src="../assets/RemoveHiddenClass.png" width="1135" />
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="finishing-words">
@@ -56,6 +77,7 @@ export default {}
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+	padding: 0 20% 0 20%;
 }
 img {
 	border-radius: 6px;
@@ -79,5 +101,28 @@ img {
 }
 .finishing-words {
 	margin-top: 15%;
+}
+@media only screen and (max-width: 1200px) {
+	img {
+		width: 900px !important;
+	}
+}
+@media only screen and (max-width: 900px) {
+	img {
+		width: 700px !important;
+	}
+	.parent-developer {
+		padding: 0 5% 0 5%;
+	}
+}
+@media only screen and (max-width: 550px) {
+	img {
+		width: 400px !important;
+	}
+}
+@media only screen and (max-width: 450px) {
+	img {
+		width: 300px !important;
+	}
 }
 </style>
