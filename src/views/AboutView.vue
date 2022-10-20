@@ -1,5 +1,6 @@
 <template>
 	<div class="parent-about">
+		<!-- Every letter has his own tag so I can move it in css -->
 		<div class="fly-in-text" :class="{ hidden: isNotActive }">
 			<h1>A</h1>
 			<h1>B</h1>
@@ -20,6 +21,7 @@
 				<h1>Hobbies</h1>
 			</div>
 			<div class="hobby-object-parent">
+				<!-- Looping through the object to avoid code duplication -->
 				<div class="hobby-object-under-parent" v-for="hobby in hobbies" :key="hobby.hobbyTitle">
 					<span class="hobby-object-child" @click="openModal(hobby.id)">
 						<h3>{{ hobby.hobbyTitle }}</h3>
@@ -27,6 +29,7 @@
 					<div class="modal">
 						<div class="modal-content">
 							<span class="close" @click="closeModal()">&times;</span>
+							<!-- {{}} those brackets are used to put a variable in html -->
 							<h3>{{ modalText }}</h3>
 						</div>
 					</div>
@@ -142,7 +145,7 @@ export default {
 
 <style>
 .parent-about {
-	min-height: calc(100vh - 61px - 61px);
+	min-height: calc(100vh - 123px);
 	padding: 3rem 7rem 0rem 7rem;
 }
 .fly-in-text {
