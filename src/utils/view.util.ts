@@ -12,6 +12,6 @@ export const checkIfOnView = (input: string): void => {
 		bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
 		bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
 	) {
-		true
+		return
 	}
 }

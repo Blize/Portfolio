@@ -9,24 +9,6 @@
 			</ol>
 		</div>
 
-		<div class="form">
-			<h1>Write an Email</h1>
-
-			<label for="name">Name</label>
-			<input type="text" name="name" />
-
-			<label for="last-name">Last Name</label>
-			<input type="text" name="last-name" />
-
-			<label for="email">Email</label>
-			<input type="text" name="email" />
-
-			<label for="info-text">Your Text</label>
-			<textarea name="info-text" cols="20" rows="10"></textarea>
-
-			<button class="submit-button">Submit</button>
-		</div>
-
 		<div class="title">
 			<h1>Info</h1>
 			<p>
@@ -80,34 +62,5 @@ li {
 	.parent-imprint {
 		padding: 0;
 	}
-}
-
-.form {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	border-radius: 6px;
-}
-label,
-input,
-textarea {
-	padding-top: 1rem;
-	border-radius: 6px;
-}
-
-input:hover,
-textarea:hover {
-	border: gray 2px solid;
-}
-
-input:focus,
-textarea:focus {
-	border: blue 2px solid;
-}
-.submit-button {
-	border-radius: 6px;
-	padding: 0.25rem 1rem 0.25rem 1rem;
-	margin: 1rem;
 }
 </style>
