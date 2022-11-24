@@ -5,7 +5,7 @@ import ImprintView from '../views/ImprintView.vue'
 import SkillsView from '../views/SkillsView.vue'
 import NotFound from '../views/NotFound.vue'
 
-const DeveloperView = () => import('../views/DeveloperView.vue')
+const DeveloperView = (): Promise<unknown> => import('../views/DeveloperView.vue')
 
 const routes: Array<RouteRecordRaw> = [
 	{
@@ -45,7 +45,7 @@ const router = createRouter({
 	routes,
 })
 
-router.beforeEach((to, from) => {
+router.beforeEach((to) => {
 	if (!routes.some((element) => element.name === to.name)) {
 		return { name: '404' }
 	}
