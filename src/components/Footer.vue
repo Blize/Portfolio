@@ -2,7 +2,7 @@
 	<footer class="footer">
 		<h5><router-link to="/imprint" class="imprint">Imprint</router-link></h5>
 		<div class="popup" @mouseover="popUpFunction()" @mouseout="popUpFunction()">
-			<h5>Version 0.0.7</h5>
+			<h5>Version {{ this.version }}</h5>
 			<span class="popuptext" id="myPopup">Last commit: {{ lastCommit }}</span>
 		</div>
 		<h5>@2022</h5>
@@ -10,11 +10,13 @@
 </template>
 
 <script>
+import { version } from '../../package.json'
 import { myDate } from '../utils/date.util.ts'
 export default {
 	data() {
 		return {
 			lastCommit: 'Today',
+			version: '',
 		}
 	},
 	methods: {
@@ -24,6 +26,7 @@ export default {
 		},
 	},
 	mounted() {
+		this.version = version
 		fetch('https://api.github.com/repos/Blize/Portfolio/commits/main', {
 			method: 'GET',
 		})
