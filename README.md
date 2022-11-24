@@ -20,5 +20,4 @@ npm run build
 
 ###  - This Portfolio only has a frontend
 ###  - It is only build by me
-###  - I try, that I have not to much dependencies
 
