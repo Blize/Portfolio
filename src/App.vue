@@ -59,7 +59,7 @@ body {
 	--light-font-color: black;
 	--light-border-color: rgb(104, 104, 104);
 
-	--shadow: box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+	--shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .dark-theme {
