@@ -24,7 +24,7 @@ export default defineComponent({
 		Footer,
 	},
 	mounted() {
-		var theme = localStorage.getItem('myTheme')
+		let theme = localStorage.getItem('myTheme')
 		this.theme = theme
 	},
 	computed: {
@@ -56,10 +56,19 @@ body {
 
 	--light-background: white;
 	--light-secondary-background: whitesmoke;
+	--light-selected-color: rgb(212, 212, 212);
+	--light-hover-color: whitesmoke;
 	--light-font-color: black;
 	--light-border-color: rgb(104, 104, 104);
 
 	--shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .switch-work-private h4:hover {
+	background-color: var(--light-hover-color);
+}
+.dark-theme .switch-work-private h4:hover {
+	background-color: var(--light-border-color);
 }
 
 .dark-theme {

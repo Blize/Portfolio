@@ -184,14 +184,19 @@ export default {
 		changeProject(id, secondId, bool) {
 			let element = document.getElementById(id)
 			let secondElement = document.getElementById(secondId)
+			let theme = localStorage.getItem('myTheme')
 
 			if (bool) {
 				this.switchProject = true
-				element.style.backgroundColor = 'rgb(104, 104, 104)'
+				if (theme === 'light') {
+					element.style.backgroundColor = 'rgb(212, 212, 212)'
+				} else element.style.backgroundColor = '#454343'
 				secondElement.style.backgroundColor = ''
 			} else {
 				this.switchProject = false
-				secondElement.style.backgroundColor = 'rgb(104, 104, 104)'
+				if (theme === 'light') {
+					secondElement.style.backgroundColor = 'rgb(212, 212, 212)'
+				} else secondElement.style.backgroundColor = '#454343'
 				element.style.backgroundColor = ''
 			}
 		},
@@ -298,6 +303,10 @@ export default {
 	padding: 1rem 2rem 1rem 2rem;
 	margin: 0;
 	border-radius: 6px;
+}
+.switch-work-private h4:hover {
+	cursor: pointer;
+	background-color: rgb(104, 104, 104);
 }
 
 .projects-object-parent {
