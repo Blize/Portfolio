@@ -73,7 +73,7 @@
 
 						<div class="flip-card-back">
 							<h1>{{ project.projectTitle }}</h1>
-							<p>{{ project.projectURL }}</p>
+							<p>{{ project.projectLeader }}</p>
 						</div>
 					</div>
 				</div>
@@ -134,19 +134,19 @@ export default {
 				{
 					projectTitle: 'Onboarding',
 					projectInfo: 'A 3 month project in which I learned basic knowledge about computer science',
-					projectURL: 'https://blize.vercel.app',
+					projectLeader: 'prename name',
 				},
 				{
 					projectTitle: 'Team Atlas',
 					projectInfo:
 						'A 6 month project where I learned Vue.js, Express and Maria.DB. I became familiar with frontend and backend development',
-					projectURL: 'https://face-app-detector.vercel.app',
+					projectLeader: 'prename name',
 				},
 				{
 					projectTitle: 'A-Team',
 					projectInfo:
 						'A 9 month project in which I worked as a frontend developer. I redeveloped and reworked the existing site with Vue 3. I had to deal with translation, project architecture and state management.',
-					projectURL: 'https://github.com/Blize/Portfolio',
+					projectLeader: 'prename name',
 				},
 			],
 		}
@@ -287,14 +287,17 @@ export default {
 .switch-work-private {
 	display: flex;
 	flex-direction: row;
-	gap: 1rem;
 
-	margin-bottom: 1rem;
-	padding: 0 2rem 0 2rem;
+	margin: 2rem;
 
 	border-radius: 6px;
 
 	box-shadow: var(--shadow);
+}
+.switch-work-private h4 {
+	padding: 1rem 2rem 1rem 2rem;
+	margin: 0;
+	border-radius: 6px;
 }
 
 .projects-object-parent {
@@ -308,7 +311,7 @@ export default {
 }
 .flip-card {
 	background-color: transparent;
-	width: 300px;
+	width: 325px;
 	height: 325px;
 	perspective: 800px;
 	margin-bottom: 4rem;
@@ -334,7 +337,7 @@ export default {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	padding: 0.75rem;
+
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
