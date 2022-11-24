@@ -43,16 +43,38 @@
 				<h4>Here is a small overview from my projects</h4>
 			</div>
 
-			<div class="flip-card" v-for="project in projects" :key="project.projectTitle">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<h2>{{ project.projectTitle }}</h2>
-						<h4>{{ project.projectInfo }}</h4>
-					</div>
+			<div class="switch-work-private">
+				<h4 @click="changeProject('private-project', 'work-project', true)" id="private-project">Private</h4>
+				<h4 @click="changeProject('private-project', 'work-project', false)" id="work-project">Work</h4>
+			</div>
 
-					<div class="flip-card-back">
-						<h1>{{ project.projectTitle }}</h1>
-						<p>{{ project.projectURL }}</p>
+			<div v-if="this.switchProject" class="project-wrapper">
+				<div class="flip-card" v-for="project in projects" :key="project.projectTitle">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h2>{{ project.projectTitle }}</h2>
+							<h4>{{ project.projectInfo }}</h4>
+						</div>
+
+						<div class="flip-card-back">
+							<h1>{{ project.projectTitle }}</h1>
+							<p>{{ project.projectURL }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="project-wrapper" v-else>
+				<div class="flip-card" v-for="project in workProjects" :key="project.projectTitle">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<h2>{{ project.projectTitle }}</h2>
+							<h4>{{ project.projectInfo }}</h4>
+						</div>
+
+						<div class="flip-card-back">
+							<h1>{{ project.projectTitle }}</h1>
+							<p>{{ project.projectLeader }}</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -88,6 +110,7 @@ export default {
 			],
 
 			modalText: '',
+			switchProject: true,
 			projects: [
 				{
 					projectTitle: 'Portfolio',
@@ -105,6 +128,25 @@ export default {
 					projectInfo:
 						'This is a small Bot build with Python in school with some friends. You can send messages directly via Reddit.',
 					projectURL: 'https://github.com/Blize/Portfolio',
+				},
+			],
+			workProjects: [
+				{
+					projectTitle: 'Onboarding',
+					projectInfo: 'A 3 month project in which I learned basic knowledge about computer science',
+					projectLeader: 'prename name',
+				},
+				{
+					projectTitle: 'Team Atlas',
+					projectInfo:
+						'A 6 month project where I learned Vue.js, Express and Maria.DB. I became familiar with frontend and backend development',
+					projectLeader: 'prename name',
+				},
+				{
+					projectTitle: 'A-Team',
+					projectInfo:
+						'A 9 month project in which I worked as a frontend developer. I redeveloped and reworked the existing site with Vue 3. I had to deal with translation, project architecture and state management.',
+					projectLeader: 'prename name',
 				},
 			],
 		}
@@ -138,6 +180,25 @@ export default {
 					this.closeModal()
 				}
 			})
+		},
+		changeProject(id, secondId, bool) {
+			let element = document.getElementById(id)
+			let secondElement = document.getElementById(secondId)
+			let theme = localStorage.getItem('myTheme')
+
+			if (bool) {
+				this.switchProject = true
+				if (theme === 'light') {
+					element.style.backgroundColor = 'rgb(212, 212, 212)'
+				} else element.style.backgroundColor = '#454343'
+				secondElement.style.backgroundColor = ''
+			} else {
+				this.switchProject = false
+				if (theme === 'light') {
+					secondElement.style.backgroundColor = 'rgb(212, 212, 212)'
+				} else secondElement.style.backgroundColor = '#454343'
+				element.style.backgroundColor = ''
+			}
 		},
 	},
 }
@@ -227,6 +288,27 @@ export default {
 .hobby-object-child h3:active {
 	cursor: grabbing;
 }
+
+.switch-work-private {
+	display: flex;
+	flex-direction: row;
+
+	margin: 2rem;
+
+	border-radius: 6px;
+
+	box-shadow: var(--shadow);
+}
+.switch-work-private h4 {
+	padding: 1rem 2rem 1rem 2rem;
+	margin: 0;
+	border-radius: 6px;
+}
+.switch-work-private h4:hover {
+	cursor: pointer;
+	background-color: rgb(104, 104, 104);
+}
+
 .projects-object-parent {
 	display: flex;
 	align-items: center;
@@ -238,7 +320,7 @@ export default {
 }
 .flip-card {
 	background-color: transparent;
-	width: 300px;
+	width: 325px;
 	height: 325px;
 	perspective: 800px;
 	margin-bottom: 4rem;
@@ -264,7 +346,7 @@ export default {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	padding: 0.75rem;
+
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
