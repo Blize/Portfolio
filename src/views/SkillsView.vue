@@ -7,44 +7,59 @@
 
 		<div class="skills-programming">
 			<h2 class="title">Developer</h2>
-			<p>Vue</p>
-			<div class="container-skills">
-				<div class="skills vue">95%</div>
-			</div>
 
 			<p>JavaScript</p>
 			<div class="container-skills">
-				<div class="skills js">90%</div>
+				<div class="skills js">Very Good</div>
 			</div>
 
 			<p>HTML</p>
 			<div class="container-skills">
-				<div class="skills html">85%</div>
+				<div class="skills html">Very Good</div>
 			</div>
 
 			<p>CSS</p>
 			<div class="container-skills">
-				<div class="skills css">85%</div>
-			</div>
-
-			<p>Express + Node.js, MariaDB</p>
-			<div class="container-skills">
-				<div class="skills ejsm">60%</div>
-			</div>
-
-			<p>BASH</p>
-			<div class="container-skills">
-				<div class="skills bash">42%</div>
+				<div class="skills css">Very Good</div>
 			</div>
 
 			<p>TypeScript</p>
 			<div class="container-skills">
-				<div class="skills ts">40%</div>
+				<div class="skills ts">Basic</div>
+			</div>
+
+			<p>BASH</p>
+			<div class="container-skills">
+				<div class="skills bash">Basic</div>
 			</div>
 
 			<p>Python</p>
 			<div class="container-skills">
-				<div class="skills python">35%</div>
+				<div class="skills python">Basic</div>
+			</div>
+
+			<p>Java</p>
+			<div class="container-skills">
+				<div class="skills java">Bad</div>
+			</div>
+		</div>
+
+		<div class="skills-framework">
+			<h2 class="title">Framework</h2>
+
+			<p>Vue</p>
+			<div class="container-skills">
+				<div class="skills vue">Very Good</div>
+			</div>
+
+			<p>Express.js</p>
+			<div class="container-skills">
+				<div class="skills ej">Basic</div>
+			</div>
+
+			<p>React</p>
+			<div class="container-skills">
+				<div class="skills react">Bad</div>
 			</div>
 		</div>
 
@@ -70,7 +85,7 @@
 			<h2 class="title">Miscellaneous</h2>
 			<p>Agile Working</p>
 			<div class="container-skills">
-				<div class="skills ag">80%</div>
+				<div class="skills ag">Familiar</div>
 			</div>
 		</div>
 	</div>
@@ -103,6 +118,7 @@
 	border-radius: 12px;
 }
 
+/*  Start Frameworks */
 .vue {
 	width: 95%;
 	animation: vue 1s;
@@ -115,6 +131,35 @@
 		width: 95%;
 	}
 }
+
+.ej {
+	width: 52%;
+	animation: ej 1s;
+}
+@keyframes ej {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 52%;
+	}
+}
+
+.react {
+	width: 25%;
+	animation: react 1s;
+}
+@keyframes react {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 25%;
+	}
+}
+/*  End Frameworks */
+
+/* Start Programming language */
 .js {
 	width: 90%;
 	animation: js 1s;
@@ -151,18 +196,20 @@
 		width: 85%;
 	}
 }
-.ejsm {
-	width: 60%;
-	animation: ejsm 1s;
+
+.ts {
+	width: 45%;
+	animation: 1s ts;
 }
-@keyframes ejsm {
+@keyframes ts {
 	from {
 		width: 0%;
 	}
 	to {
-		width: 60%;
+		width: 45%;
 	}
 }
+
 .bash {
 	width: 42%;
 	animation: bash 1s;
@@ -175,18 +222,7 @@
 		width: 42%;
 	}
 }
-.ts {
-	width: 40%;
-	animation: 1s ts;
-}
-@keyframes ts {
-	from {
-		width: 0%;
-	}
-	to {
-		width: 40%;
-	}
-}
+
 .python {
 	width: 35%;
 	animation: 1s python;
@@ -199,19 +235,75 @@
 		width: 35%;
 	}
 }
+
+.java {
+	width: 23%;
+	animation: 1s java;
+}
+@keyframes java {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 23%;
+	}
+}
+/* End Programming language */
+
+/* Start Language */
 .ger {
 	width: 100%;
 	animation: 1s ger;
 }
+@keyframes ger {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
 .eng {
 	width: 75%;
+	animation: 1s eng;
+}
+@keyframes eng {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 75%;
+	}
 }
 .fr {
 	width: 30%;
+	animation: 1s fr;
 }
+@keyframes fr {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 30%;
+	}
+}
+/* End Language */
+
+/* Start Miscellaneous */
 .ag {
 	width: 80%;
+	animation: 1s ag;
 }
+@keyframes ag {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 80%;
+	}
+}
+/* End Miscellaneous */
+
 .title {
 	margin-top: 5rem;
 }

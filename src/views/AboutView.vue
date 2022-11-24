@@ -334,6 +334,9 @@ export default {
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
 }
+.flip-card-inner h4 {
+	padding: 1rem;
+}
 
 .flip-card:hover .flip-card-inner {
 	transform: rotateY(180deg);
@@ -355,6 +358,7 @@ export default {
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 	color: black;
+	overflow: scroll;
 }
 
 .flip-card-back {
