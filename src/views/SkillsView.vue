@@ -10,17 +10,17 @@
 
 			<p>JavaScript</p>
 			<div class="container-skills">
-				<div class="skills js">Very Good</div>
+				<div class="skills js">Top</div>
 			</div>
 
 			<p>HTML</p>
 			<div class="container-skills">
-				<div class="skills html">Very Good</div>
+				<div class="skills html">Top</div>
 			</div>
 
 			<p>CSS</p>
 			<div class="container-skills">
-				<div class="skills css">Very Good</div>
+				<div class="skills css">Top</div>
 			</div>
 
 			<p>TypeScript</p>
@@ -167,7 +167,7 @@
 /* Start Programming language */
 .js {
 	width: 90%;
-	animation: js 1s;
+	animation: 1s js;
 }
 @keyframes js {
 	from {
@@ -179,7 +179,7 @@
 }
 .html {
 	width: 85%;
-	animation: html 1s;
+	animation: 1s html;
 }
 @keyframes html {
 	from {
@@ -191,7 +191,7 @@
 }
 .css {
 	width: 85%;
-	animation: css 1s;
+	animation: 1s css;
 }
 @keyframes css {
 	from {
