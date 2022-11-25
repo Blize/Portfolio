@@ -152,6 +152,7 @@ export default {
 		}
 	},
 	mounted() {
+		this.setInitialValue()
 		this.closeModalOnEscape()
 		setTimeout(() => {
 			this.isNotActive = false
@@ -164,6 +165,14 @@ export default {
 		})
 	},
 	methods: {
+		setInitialValue() {
+			let element = document.getElementById('private-project')
+			let theme = localStorage.getItem('myTheme')
+
+			if (theme === 'light') {
+				element.style.backgroundColor = 'rgb(212, 212, 212)'
+			} else element.style.backgroundColor = '#454343'
+		},
 		openModal(id) {
 			let myHobby = this.hobbies.filter((hobby) => hobby.id === id)[0]
 			this.modalText = myHobby.hobbyModal
@@ -206,7 +215,7 @@ export default {
 
 <style>
 .parent-about {
-	min-height: calc(100vh - 123px);
+	min-height: calc(100vh - 120px);
 	padding: 3rem 7rem 0rem 7rem;
 }
 .fly-in-text {
