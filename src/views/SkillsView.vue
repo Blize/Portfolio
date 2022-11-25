@@ -6,7 +6,7 @@
 		</div>
 
 		<div class="skills-programming">
-			<h2 class="title">Developer</h2>
+			<h2 class="title">Computer Science Languages</h2>
 
 			<p>JavaScript</p>
 			<div class="container-skills">
@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="skills-framework">
-			<h2 class="title">Framework</h2>
+			<h2 class="title">Frameworks</h2>
 
 			<p>Vue</p>
 			<div class="container-skills">
@@ -86,6 +86,11 @@
 			<p>Agile Working</p>
 			<div class="container-skills">
 				<div class="skills ag">Familiar</div>
+			</div>
+
+			<p>UI/UX</p>
+			<div class="container-skills">
+				<div class="skills uix">Basic</div>
 			</div>
 		</div>
 	</div>
@@ -300,6 +305,19 @@
 	}
 	to {
 		width: 80%;
+	}
+}
+
+.uix {
+	width: 40%;
+	animation: 1s uix;
+}
+@keyframes uix {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 40%;
 	}
 }
 /* End Miscellaneous */

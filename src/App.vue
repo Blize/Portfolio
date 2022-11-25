@@ -47,6 +47,9 @@ body {
 	padding: 0;
 	width: 100%;
 }
+h2 {
+	font-weight: 400;
+}
 :root {
 	--dark-background: #3d3d3d;
 	--dark-secondary-background: #353535;
