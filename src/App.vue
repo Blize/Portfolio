@@ -47,7 +47,8 @@ body {
 	padding: 0;
 	width: 100%;
 }
-h2 {
+h2,
+h3 {
 	font-weight: 400;
 }
 :root {

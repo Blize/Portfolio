@@ -8,14 +8,15 @@
 				<div>
 					<h2 class="table-title">Naming</h2>
 					<h3 class="table-text">
-						My FUNCTIONS are written in camel-case, important is here that the name always should describe what the
-						function does
+						My FUNCTIONS are written in camel-case. For me it is important that the names also describe what the
+						functions do.
 					</h3>
 					<div>
 						<img src="../assets/NamingOfFunctions.png" width="1135" />
 					</div>
 					<h3 class="table-text">
-						My CLASSES and ID's are written in kebab-case. Also I try to make class names that make sense
+						My CLASSES and ID's are written in kebab-case. For this I also try to use clever names for the CLASSES and
+						IDs
 					</h3>
 					<div>
 						<img src="../assets/NamingOfClass.png" width="1135" />
@@ -25,13 +26,13 @@
 				<div>
 					<h2 class="table-title">Dynamic</h2>
 					<h3 class="table-text">
-						I try to write dynamic HTML and Java Script/Type Script Code. As you can see here i insert my content
-						dynamic into the HTML
+						I am trying to write dynamic HTML CSS and Java Script. Here you can see how I insert Java Script dynamically
+						into the HTML
 					</h3>
 					<div>
 						<img src="../assets/DynamicHTML.png" width="1135" />
 					</div>
-					<h3 class="table-text">As well as using util function to not have code duplication</h3>
+					<h3 class="table-text">I am also trying to write util functions to avoid code duplication.</h3>
 					<div>
 						<img src="../assets/DynamicUtilFunction.png" width="1135" />
 					</div>
@@ -45,7 +46,7 @@
 					<div>
 						<img src="../assets/KeyFrameAnimation.png" width="1135" />
 					</div>
-					<h3 class="table-text">Another way of writing animations is with conditional classes</h3>
+					<h3 class="table-text">Another way to write animations is with conditional classes</h3>
 					<div>
 						<img src="../assets/ConditionalClassHTML.png" width="1135" />
 						<h3>After our page renders we wait 0.5s and then deactivate the class</h3>
@@ -59,7 +60,7 @@
 
 				<div>
 					<h2 class="table-title">Responsive Design</h2>
-					<h3 class="table-text">First of all for Responsive design I use Display Flex, as a example</h3>
+					<h3 class="table-text">For response design I use display fle, as a example</h3>
 					<div>
 						<img src="../assets/DisplayFlexWrap.png" width="1135" />
 					</div>
@@ -68,7 +69,8 @@
 						<img src="../assets/MediaResponsive.png" width="1135" />
 					</div>
 					<h3 class="table-text">
-						And as last component, we have the units. Important here is not to use px, instead use rem, %, vh or vw
+						And as last component, we have the units. It is important not to use units such as px, instead use rem, %,
+						vh or vw
 					</h3>
 					<div>
 						<img src="../assets/RemUnit.png" width="1135" />

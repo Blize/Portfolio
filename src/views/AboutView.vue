@@ -11,8 +11,8 @@
 
 		<div class="info-text">
 			<h4>
-				I am a 17 year old programmer and designer. I am at my second year at swisscom. I am an application developer,
-				and have experienced many areas of computer science. Below here you can see my hobbies and more.
+				I am a 17 year old developer at Swisscom. I already got to know different areas of computer science. Below here
+				you can see my hobbies and more.
 			</h4>
 		</div>
 
@@ -40,7 +40,7 @@
 		<div class="projects-object-parent">
 			<div class="project-text">
 				<h1>Projects</h1>
-				<h4>Here is a small overview from my projects</h4>
+				<h4>Overview of my previous projects</h4>
 			</div>
 
 			<div class="switch-work-private">
