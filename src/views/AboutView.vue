@@ -330,7 +330,7 @@ export default {
 .flip-card {
 	background-color: transparent;
 	width: 325px;
-	height: 325px;
+	min-height: 332.5px;
 	perspective: 800px;
 	margin-bottom: 4rem;
 }
@@ -367,7 +367,7 @@ export default {
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 	color: black;
-	overflow: scroll;
+	overflow: auto;
 }
 
 .flip-card-back {
