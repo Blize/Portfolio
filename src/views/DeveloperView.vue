@@ -2,7 +2,7 @@
 	<div class="parent-developer">
 		<div class="main-content-wrapper">
 			<h1>Welcome developer</h1>
-			<h3>This page is here to show you some insides of my code. Like a small documentation</h3>
+			<h3>This page is here to show you some insights of my code. Like a small documentation</h3>
 
 			<div class="table-of-content">
 				<div>
@@ -15,8 +15,7 @@
 						<img src="../assets/NamingOfFunctions.png" width="1135" />
 					</div>
 					<h3 class="table-text">
-						My CLASSES and ID's are written in kebab-case. For this I also try to use clever names for the CLASSES and
-						IDs
+						My CLASSES and ID's are written in kebab-case. I also try to choose clever names for the CLASSES and ID's.
 					</h3>
 					<div>
 						<img src="../assets/NamingOfClass.png" width="1135" />
@@ -78,7 +77,9 @@
 				</div>
 			</div>
 			<div class="finishing-words">
-				<h3>If you wanna see more of my code go to my <a href="https://github.com/Blize">Github</a> Page</h3>
+				<h3>
+					If you wanna see more of my code go to my <strong><a href="https://github.com/Blize">Github</a></strong> Page
+				</h3>
 			</div>
 		</div>
 	</div>
