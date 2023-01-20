@@ -10,11 +10,6 @@
 				</div>
 			</div>
 		</div>
-		<div>
-			<div class="picture">
-				<img src="../assets/ProgrammerIllustrator.svg" alt="Programmer at table" />
-			</div>
-		</div>
 	</div>
 </template>
 
@@ -52,7 +47,6 @@ div.parent-home {
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
-	flex-direction: row;
 	gap: 4rem;
 
 	margin: 1rem;
@@ -82,41 +76,5 @@ div.parent-home {
 .fly-in-under-title.hidden {
 	opacity: 0;
 	transform: translateY(50px);
-}
-
-@media screen and (max-width: 1024px) {
-	div.parent-home {
-		flex-direction: column;
-		align-items: center;
-		gap: 0;
-	}
-	.title {
-		margin-top: -10rem;
-	}
-	img {
-		height: 400px;
-	}
-}
-@media screen and (max-width: 524px) {
-	img {
-		width: 400px;
-	}
-	.title {
-		margin-top: 2rem;
-	}
-}
-@media screen and (max-width: 424px) {
-	img {
-		width: 300px;
-	}
-}
-
-@media screen and (max-height: 424px) {
-	.title {
-		margin-top: 1rem;
-	}
-	img {
-		height: 150px;
-	}
 }
 </style>
