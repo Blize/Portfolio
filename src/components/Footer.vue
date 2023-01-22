@@ -5,7 +5,7 @@
 			<h5>Version {{ this.version }}</h5>
 			<span class="popuptext" id="myPopup">Last commit: {{ lastCommit }}</span>
 		</div>
-		<h5>@2022</h5>
+		<h5>@2023</h5>
 	</footer>
 </template>
 
