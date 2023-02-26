@@ -29,7 +29,6 @@
 					<div class="modal">
 						<div class="modal-content">
 							<span class="close" @click="closeModal()">&times;</span>
-							<!-- {{}} those brackets are used to put a variable in html -->
 							<h3>{{ modalText }}</h3>
 						</div>
 					</div>
