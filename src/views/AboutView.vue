@@ -55,7 +55,7 @@
 
 						<div class="flip-card-back">
 							<h1>{{ project.projectTitle }}</h1>
-							<p>{{ project.projectURL }}</p>
+							<a>{{ project.projectURL }}</a>
 						</div>
 					</div>
 				</div>
@@ -124,7 +124,7 @@ export default {
 					projectTitle: 'Reddit-Bot',
 					projectInfo:
 						'This is a small Bot build with Python in school with some friends. You can send messages directly via Reddit.',
-					projectURL: 'https://github.com/Blize/Portfolio',
+					projectURL: 'https://github.com/Blize/reddit-bot',
 				},
 			],
 			workProjects: [
