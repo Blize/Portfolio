@@ -10,8 +10,9 @@
 </template>
 
 <script>
-import { version } from '../../package.json'
-import { myDate } from '../utils/date.util.ts'
+import { version as v } from '../../package.json'
+import { getLastCommit } from '../services/Footer.Service.js'
+
 export default {
 	data() {
 		return {
@@ -25,17 +26,9 @@ export default {
 			popup.classList.toggle('show')
 		},
 	},
-	mounted() {
-		this.version = version
-		fetch('https://api.github.com/repos/Blize/Portfolio/commits/main', {
-			method: 'GET',
-		})
-			.then((response) => response.json())
-			.then((data) => data.commit.committer.date)
-			.then((data) => {
-				const date = new Date(data)
-				this.lastCommit = myDate(date)
-			})
+	async mounted() {
+		this.version = v
+		this.lastCommit = await getLastCommit()
 	},
 }
 </script>

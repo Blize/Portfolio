@@ -1,4 +1,4 @@
-export const myDate = (input: string): string => {
+export const formatDate = (input: string): string => {
 	const date = new Date(input)
 	const year = date.getUTCFullYear()
 	const month = date.getUTCMonth() + 1 >= 10 ? date.getUTCMonth() + 1 : `0${date.getUTCMonth() + 1}`
