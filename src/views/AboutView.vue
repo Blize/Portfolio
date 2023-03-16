@@ -55,7 +55,7 @@
 
 						<div class="flip-card-back">
 							<h1>{{ project.projectTitle }}</h1>
-							<a>{{ project.projectURL }}</a>
+							<a :href="project.projectURL">{{ project.projectURL }}</a>
 						</div>
 					</div>
 				</div>
