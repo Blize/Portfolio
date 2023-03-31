@@ -364,7 +364,7 @@ export default {
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 	color: black;
-	overflow: scroll;
+	overflow: hidden;
 }
 
 .flip-card-back {
