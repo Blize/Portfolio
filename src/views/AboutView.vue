@@ -145,6 +145,18 @@ export default {
 						'A 9 month project in which I worked as a frontend developer. I redeveloped and reworked the existing site with Vue 3. I had to deal with translation, project architecture and state management.',
 					projectLeader: 'prename name',
 				},
+				{
+					projectTitle: 'Team Neville',
+					projectInfo:
+						'In a 6 month project I was being a Product Owner for a team of 3 apprentice. Together we went through 3 months of learning an preparing for other teams and 3 months of developing',
+					projectLeader: 'prename name',
+				},
+				{
+					projectTitle: 'Team EDP',
+					projectInfo:
+						'In 6 months I was developing the Frontend of the EDH website. I was mostly working with react in this time',
+					projectLeader: 'prename name',
+				},
 			],
 		}
 	},
