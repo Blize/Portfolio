@@ -27,10 +27,12 @@
 			<div class="container-skills">
 				<div class="skills ts">Advanced</div>
 			</div>
+
 			<p>C</p>
 			<div class="container-skills">
-				<div class="skills c">Basic</div>
+				<div class="skills cLang">Basic</div>
 			</div>
+
 			<p>Python</p>
 			<div class="container-skills">
 				<div class="skills python">Basic</div>
@@ -247,17 +249,16 @@
 		width: 25%;
 	}
 }
-.c {
+.cLang {
 	width: 38%;
-	animation: 1s c;
-
-	@keyframes c {
-		from {
-			width: 0%;
-		}
-		to {
-			width: 38%;
-		}
+	animation: 1s cLang;
+}
+@keyframes cLang {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 38%;
 	}
 }
 .python {
