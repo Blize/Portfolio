@@ -25,17 +25,20 @@
 
 			<p>TypeScript</p>
 			<div class="container-skills">
-				<div class="skills ts">Basic</div>
+				<div class="skills ts">Advanced</div>
+			</div>
+			<p>C</p>
+			<div class="container-skills">
+				<div class="skills c">Basic</div>
+			</div>
+			<p>Python</p>
+			<div class="container-skills">
+				<div class="skills python">Basic</div>
 			</div>
 
 			<p>BASH</p>
 			<div class="container-skills">
-				<div class="skills bash">Basic</div>
-			</div>
-
-			<p>Python</p>
-			<div class="container-skills">
-				<div class="skills python">Basic</div>
+				<div class="skills bash">Bad</div>
 			</div>
 
 			<p>Java</p>
@@ -52,14 +55,19 @@
 				<div class="skills vue">Very Good</div>
 			</div>
 
+			<p>React</p>
+			<div class="container-skills">
+				<div class="skills react">Advanced</div>
+			</div>
+
 			<p>Express.js</p>
 			<div class="container-skills">
 				<div class="skills ej">Basic</div>
 			</div>
 
-			<p>React</p>
+			<p>Nest.js</p>
 			<div class="container-skills">
-				<div class="skills react">Bad</div>
+				<div class="skills nj">Basic</div>
 			</div>
 		</div>
 
@@ -138,7 +146,7 @@
 }
 
 .ej {
-	width: 52%;
+	width: 40%;
 	animation: ej 1s;
 }
 @keyframes ej {
@@ -146,12 +154,24 @@
 		width: 0%;
 	}
 	to {
-		width: 52%;
+		width: 30%;
+	}
+}
+.nj {
+	width: 30%;
+	animation: nj 1s;
+}
+@keyframes nj {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 30%;
 	}
 }
 
 .react {
-	width: 25%;
+	width: 65%;
 	animation: react 1s;
 }
 @keyframes react {
@@ -159,7 +179,7 @@
 		width: 0%;
 	}
 	to {
-		width: 25%;
+		width: 65%;
 	}
 }
 /*  End Frameworks */
@@ -203,7 +223,7 @@
 }
 
 .ts {
-	width: 45%;
+	width: 75%;
 	animation: 1s ts;
 }
 @keyframes ts {
@@ -211,12 +231,12 @@
 		width: 0%;
 	}
 	to {
-		width: 45%;
+		width: 75%;
 	}
 }
 
 .bash {
-	width: 42%;
+	width: 25%;
 	animation: bash 1s;
 }
 @keyframes bash {
@@ -224,10 +244,22 @@
 		width: 0%;
 	}
 	to {
-		width: 42%;
+		width: 25%;
 	}
 }
+.c {
+	width: 38%;
+	animation: 1s c;
 
+	@keyframes c {
+		from {
+			width: 0%;
+		}
+		to {
+			width: 38%;
+		}
+	}
+}
 .python {
 	width: 35%;
 	animation: 1s python;
