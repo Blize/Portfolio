@@ -4,7 +4,7 @@
 			<h1>Imprint</h1>
 			<ol>
 				<li>Owner: Matthias Mantsch</li>
-				<li>Email: matthias@mantsch.ch</li>
+				<li>Email: blize.developer@gmail.com</li>
 				<li>Host: <a href="https://vercel.com">Vercel</a></li>
 			</ol>
 		</div>
